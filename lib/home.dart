@@ -16,16 +16,46 @@ class Home extends StatelessWidget {
       decoration: const BoxDecoration(color: Color(0xffFFFDDB)),
       child: SingleChildScrollView(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                border: Border(
-                  bottom: BorderSide(color: Color(0xff128C7E), width: 1.0),
+            MaterialButton(
+              materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              padding: const EdgeInsets.all(0),
+              onPressed: () {
+                print("Button pressed");
+              },
+              child: Container(
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  border: Border(
+                    bottom: BorderSide(color: Color(0xff128C7E), width: 1.0),
+                  ),
+                ),
+                height: screenHeight / 20.8,
+                width: screenWidth,
+                padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                alignment: Alignment.centerLeft,
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.location_on,
+                      color: Color(0xff128C7E),
+                    ),
+                    Container(
+                        margin: const EdgeInsets.only(left: 4.0),
+                        child: const FittedBox(
+                            child: Text(
+                          'Click here to select a location',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                              fontFamily: 'Quicksand-SemiBold',
+                              color: Color(0xff128C7E)),
+                        )))
+                  ],
                 ),
               ),
-              height: screenHeight / 20.8,
-              width: screenWidth,
             ),
             Container(
               padding:
@@ -33,6 +63,20 @@ class Home extends StatelessWidget {
               height: screenHeight / 11,
               width: screenWidth,
               child: SearchBar(
+                  trailing: [
+                    Container(
+                      margin: const EdgeInsets.only(right: 8.0),
+                      child: const Icon(
+                        Icons.search,
+                        color: Color(0xff128C7E),
+                      ),
+                    )
+                  ],
+                  hintStyle: const MaterialStatePropertyAll(TextStyle(
+                    fontFamily: 'Quicksand-SemiBold',
+                    color: Color(0xff128C7E),
+                  )),
+                  hintText: 'Search Ecostora.com',
                   elevation: const MaterialStatePropertyAll(0.0),
                   shape: MaterialStatePropertyAll(
                     RoundedRectangleBorder(
@@ -176,7 +220,7 @@ class Home extends StatelessWidget {
                       options: CarouselOptions(
                         viewportFraction: 1,
                         aspectRatio: 16 / 9,
-                        autoPlay: true,
+                        autoPlay: false,
                         autoPlayInterval: const Duration(seconds: 4),
                       ),
                       items: [

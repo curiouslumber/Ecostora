@@ -40,8 +40,12 @@ flutter:
     - images/luxurybag1.jpg
     - images/jacket1.jpg
     - images/laptopsale1.jpg
+    - images/pages/screen1.png
 
   fonts:
+    - family: Quicksand-Regular
+      fonts:
+        - asset: fonts/Quicksand/static/Quicksand-Regular.ttf
     - family: Quicksand-SemiBold
       fonts:
         - asset: fonts/Quicksand/static/Quicksand-SemiBold.ttf

@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
             elevation: 16.0,
             backgroundColor: const Color(0xff128C7E),
             title: const Text(
-              'Ecostara',
+              'Ecostora',
               style: TextStyle(fontFamily: 'Quicksand-SemiBold'),
             ),
             actions: [
@@ -31,35 +31,37 @@ class HomePage extends StatelessWidget {
           body: const Home(),
           bottomNavigationBar: BottomNavigationBar(
             elevation: 16.0,
-            fixedColor: Colors.white,
             type: BottomNavigationBarType.fixed,
             iconSize: 24.0,
             backgroundColor: const Color(0xff128C7E),
             items: const [
               BottomNavigationBarItem(
-                  icon: Icon(Icons.home, color: Colors.white), label: 'Home'),
+                  icon: Icon(
+                    Icons.home,
+                  ),
+                  label: 'Home'),
               BottomNavigationBarItem(
                   icon: Icon(
                     Icons.bookmark,
-                    color: Colors.white,
                   ),
                   label: 'Favourites'),
               BottomNavigationBarItem(
                   icon: Icon(
                     Icons.shopping_cart,
-                    color: Colors.white,
                   ),
                   label: 'Cart'),
               BottomNavigationBarItem(
                   icon: Icon(
                     Icons.account_circle_rounded,
-                    color: Colors.white,
                   ),
                   label: 'Account'),
             ],
             unselectedItemColor: Colors.white,
-            unselectedLabelStyle: const TextStyle(color: Colors.white),
-            selectedLabelStyle: const TextStyle(color: Colors.white),
+            unselectedLabelStyle: const TextStyle(
+                color: Colors.white, fontFamily: 'Quicksand-Regular'),
+            selectedLabelStyle: const TextStyle(
+                color: Color(0xffFFFCCA), fontFamily: 'Quicksand-SemiBold'),
+            selectedItemColor: const Color(0xffFFFCCA),
           ),
         ),
       ),
