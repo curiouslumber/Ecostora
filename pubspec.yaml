@@ -1,0 +1,46 @@
+name: ecostore
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.2 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  get:
+  carousel_slider: 
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - images/men1.jpg
+    - images/men2.jpg
+    - images/tech1.jpg
+    - images/tech2.jpg
+    - images/women1.jpg
+    - images/mobile1.jpg
+
+  fonts:
+    - family: Quicksand-SemiBold
+      fonts:
+        - asset: fonts/Quicksand/static/Quicksand-SemiBold.ttf
+    - family: Quicksand-Bold
+      fonts:
+        - asset: fonts/Quicksand/static/Quicksand-Bold.ttf
+    
+
+    
