@@ -13,7 +13,8 @@ class HomePage extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             foregroundColor: const Color(0xffFFFCCA),
-            shadowColor: const Color.fromARGB(106, 18, 140, 126),
+            shadowColor: const Color.fromARGB(0, 18, 140, 126),
+            elevation: 16.0,
             backgroundColor: const Color(0xff128C7E),
             title: const Text(
               'Ecostara',
@@ -29,6 +30,7 @@ class HomePage extends StatelessWidget {
           drawer: const Sidebar(),
           body: const Home(),
           bottomNavigationBar: BottomNavigationBar(
+            elevation: 16.0,
             fixedColor: Colors.white,
             type: BottomNavigationBarType.fixed,
             iconSize: 24.0,

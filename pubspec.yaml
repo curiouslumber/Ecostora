@@ -33,6 +33,13 @@ flutter:
     - images/tech2.jpg
     - images/women1.jpg
     - images/mobile1.jpg
+    - images/headset1.jpg
+    - images/mensclothing1.jpg
+    - images/womensclothing1.jpg
+    - images/mobile2.jpg
+    - images/luxurybag1.jpg
+    - images/jacket1.jpg
+    - images/laptopsale1.jpg
 
   fonts:
     - family: Quicksand-SemiBold
