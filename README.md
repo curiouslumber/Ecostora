@@ -9,3 +9,4 @@
 ## Technologies:
 - Flutter & Dart
 - Figma for UI Design
+- Leonardo AI for Image Generation
