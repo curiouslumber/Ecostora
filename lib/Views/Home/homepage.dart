@@ -1,9 +1,15 @@
+import 'package:ecostore/ViewModel/controller.dart';
+import 'package:ecostore/Views/Account/account.dart';
 import 'package:ecostore/Views/Home/home.dart';
 import 'package:ecostore/Views/Home/sidebar.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
+
+  final pages = [const Home(), Account()];
+  final c = Get.put(Controller());
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +34,7 @@ class HomePage extends StatelessWidget {
             centerTitle: true,
           ),
           drawer: const Sidebar(),
-          body: const Home(),
+          body: pages[1],
           bottomNavigationBar: BottomNavigationBar(
             elevation: 16.0,
             type: BottomNavigationBarType.fixed,
