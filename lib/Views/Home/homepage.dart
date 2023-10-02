@@ -1,5 +1,5 @@
-import 'package:ecostore/home.dart';
-import 'package:ecostore/sidebar.dart';
+import 'package:ecostore/Views/Home/home.dart';
+import 'package:ecostore/Views/Home/sidebar.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {

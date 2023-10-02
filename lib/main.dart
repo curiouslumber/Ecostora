@@ -1,4 +1,4 @@
-import 'package:ecostore/homepage.dart';
+import 'package:ecostore/Views/Home/homepage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
