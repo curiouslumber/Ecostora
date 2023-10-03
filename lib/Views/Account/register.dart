@@ -6,7 +6,14 @@ class Register extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(),
+      appBar: AppBar(
+        backgroundColor: const Color(0xff128C7E),
+        foregroundColor: const Color(0xffFFFDDB),
+      ),
+      body: Container(
+        alignment: Alignment.center,
+        color: const Color(0xffFFFDDB),
+      ),
     );
   }
 }

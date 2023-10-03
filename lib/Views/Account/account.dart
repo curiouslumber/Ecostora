@@ -1,4 +1,5 @@
 import 'package:ecostore/ViewModel/controller.dart';
+import 'package:ecostore/Views/Account/register.dart';
 import 'package:ecostore/Views/Account/signin.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -282,26 +283,34 @@ class Account extends StatelessWidget {
                           height: 9.h,
                           // color: Colors.green,
                           padding: EdgeInsets.symmetric(horizontal: 5.w),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              const Icon(
-                                Icons.add_circle_outlined,
-                                color: Color(0xff128C7E),
-                                size: 30,
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(left: 5.w),
-                                child: Text(
-                                  'Register',
-                                  style: TextStyle(
-                                      fontFamily: 'Quicksand-SemiBold',
-                                      color: const Color(0xff128C7E),
-                                      fontSize: 16.sp),
+                          child: MaterialButton(
+                            onPressed: () {
+                              Get.to(() => const Register());
+                            },
+                            materialTapTargetSize:
+                                MaterialTapTargetSize.shrinkWrap,
+                            padding: const EdgeInsets.all(0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                const Icon(
+                                  Icons.add_circle_outlined,
+                                  color: Color(0xff128C7E),
+                                  size: 30,
                                 ),
-                              ),
-                            ],
+                                Container(
+                                  margin: EdgeInsets.only(left: 5.w),
+                                  child: Text(
+                                    'Register',
+                                    style: TextStyle(
+                                        fontFamily: 'Quicksand-SemiBold',
+                                        color: const Color(0xff128C7E),
+                                        fontSize: 16.sp),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                         Container(
