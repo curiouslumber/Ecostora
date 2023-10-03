@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
             centerTitle: true,
           ),
           drawer: const Sidebar(),
-          body: pages[0],
+          body: pages[1],
           bottomNavigationBar: BottomNavigationBar(
             elevation: 16.0,
             type: BottomNavigationBarType.fixed,
@@ -64,7 +64,7 @@ class HomePage extends StatelessWidget {
             ],
             unselectedItemColor: Colors.white,
             unselectedLabelStyle: const TextStyle(
-                color: Colors.white, fontFamily: 'Quicksand-Regular'),
+                color: Colors.white, fontFamily: 'Quicksand-Medium'),
             selectedLabelStyle: const TextStyle(
                 color: Color(0xffFFFCCA), fontFamily: 'Quicksand-SemiBold'),
             selectedItemColor: const Color(0xffFFFCCA),

@@ -50,6 +50,9 @@ flutter:
     - family: Quicksand-SemiBold
       fonts:
         - asset: fonts/Quicksand/static/Quicksand-SemiBold.ttf
+    - family: Quicksand-Medium
+      fonts:
+        - asset: fonts/Quicksand/static/Quicksand-Medium.ttf
     - family: Quicksand-Bold
       fonts:
         - asset: fonts/Quicksand/static/Quicksand-Bold.ttf
