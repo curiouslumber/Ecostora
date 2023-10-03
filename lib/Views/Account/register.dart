@@ -1,4 +1,4 @@
-import 'package:ecostore/ViewModel/controller.dart';
+import 'package:ecostore/Models/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';

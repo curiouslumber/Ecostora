@@ -1,4 +1,4 @@
-import 'package:ecostore/ViewModel/controller.dart';
+import 'package:ecostore/Models/controller.dart';
 import 'package:ecostore/Views/Account/register.dart';
 import 'package:ecostore/Views/Account/signin.dart';
 import 'package:flutter/material.dart';
