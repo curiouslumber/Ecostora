@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
 import 'package:sizer/sizer.dart';
 
 class SignIn extends StatelessWidget {
@@ -173,16 +174,20 @@ class SignIn extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      const Icon(
-                        Icons.abc,
+                      Icon(
+                        Ionicons.logo_google,
+                        size: 16.sp,
                         color: Colors.white,
                       ),
-                      Text(
-                        'Sign In With Google',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: 'Quicksand-SemiBold',
-                            fontSize: 12.sp),
+                      Container(
+                        margin: EdgeInsets.only(left: 2.w),
+                        child: Text(
+                          'Sign In With Google',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'Quicksand-SemiBold',
+                              fontSize: 12.sp),
+                        ),
                       ),
                     ],
                   ),

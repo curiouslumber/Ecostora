@@ -16,6 +16,7 @@ dependencies:
   get: ^4.6.6
   carousel_slider: ^4.2.1
   sizer: ^2.0.15
+  ionicons: ^0.2.2
 
 dev_dependencies:
   flutter_test:
