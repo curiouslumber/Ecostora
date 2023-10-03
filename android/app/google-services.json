@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "551278337015",
+    "project_id": "ecostora-f1965",
+    "storage_bucket": "ecostora-f1965.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:551278337015:android:584fb98068617cd5a1acf2",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkAXkVwCAkuaYgQxqyNlugdWrNnzKklyg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
