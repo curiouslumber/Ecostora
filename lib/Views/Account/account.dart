@@ -285,6 +285,9 @@ class Account extends StatelessWidget {
                           padding: EdgeInsets.symmetric(horizontal: 5.w),
                           child: MaterialButton(
                             onPressed: () {
+                              if (c.registerPageFlow.value != 0) {
+                                c.registerPageFlow.value = 0;
+                              }
                               Get.to(() => Register());
                             },
                             materialTapTargetSize:

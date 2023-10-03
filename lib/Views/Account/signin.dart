@@ -118,8 +118,8 @@ class SignIn extends StatelessWidget {
                   child: Text(
                     'Submit',
                     style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Quicksand-SemiBold',
+                        color: const Color(0xffFFFCCA),
+                        fontFamily: 'Quicksand-Bold',
                         fontSize: 12.sp),
                   ),
                 ),
@@ -177,14 +177,14 @@ class SignIn extends StatelessWidget {
                       Icon(
                         Ionicons.logo_google,
                         size: 16.sp,
-                        color: Colors.white,
+                        color: const Color(0xffFFFCCA),
                       ),
                       Container(
                         margin: EdgeInsets.only(left: 2.w),
                         child: Text(
                           'Sign In With Google',
                           style: TextStyle(
-                              color: Colors.white,
+                              color: const Color(0xffFFFCCA),
                               fontFamily: 'Quicksand-SemiBold',
                               fontSize: 12.sp),
                         ),
