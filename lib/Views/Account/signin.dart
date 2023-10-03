@@ -10,7 +10,7 @@ class SignIn extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xff128C7E),
-        foregroundColor: const Color(0xffFFFDDB),
+        foregroundColor: const Color(0xffFFFCCA),
       ),
       body: Container(
         alignment: Alignment.center,

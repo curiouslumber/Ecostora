@@ -285,7 +285,7 @@ class Account extends StatelessWidget {
                           padding: EdgeInsets.symmetric(horizontal: 5.w),
                           child: MaterialButton(
                             onPressed: () {
-                              Get.to(() => const Register());
+                              Get.to(() => Register());
                             },
                             materialTapTargetSize:
                                 MaterialTapTargetSize.shrinkWrap,
