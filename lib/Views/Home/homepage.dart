@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
             centerTitle: true,
           ),
           drawer: const Sidebar(),
-          body: pages[1],
+          body: pages[0],
           bottomNavigationBar: BottomNavigationBar(
             elevation: 16.0,
             type: BottomNavigationBarType.fixed,

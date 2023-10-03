@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:sizer/sizer.dart';
 
 class Home extends StatelessWidget {
   const Home({
@@ -22,6 +23,7 @@ class Home extends StatelessWidget {
             MaterialButton(
               materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
               padding: const EdgeInsets.all(0),
+              height: screenHeight / 20,
               onPressed: () {
                 print("Button pressed");
               },
@@ -32,7 +34,7 @@ class Home extends StatelessWidget {
                     bottom: BorderSide(color: Color(0xff128C7E), width: 1.0),
                   ),
                 ),
-                height: screenHeight / 20.8,
+                height: screenHeight / 20,
                 width: screenWidth,
                 padding: const EdgeInsets.symmetric(horizontal: 4.0),
                 alignment: Alignment.centerLeft,
@@ -60,7 +62,7 @@ class Home extends StatelessWidget {
             Container(
               padding:
                   const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
-              height: screenHeight / 11,
+              height: screenHeight / 10,
               width: screenWidth,
               child: SearchBar(
                   trailing: [
@@ -83,7 +85,7 @@ class Home extends StatelessWidget {
                         side: const BorderSide(
                           color: Color(0xff128C7E),
                         ),
-                        borderRadius: BorderRadius.circular(16.0)),
+                        borderRadius: BorderRadius.circular(8.0)),
                   )),
             ),
             Container(
@@ -108,14 +110,13 @@ class Home extends StatelessWidget {
                         ),
                         Container(
                           margin: const EdgeInsets.only(top: 4.0),
-                          child: const FittedBox(
-                            child: Text(
-                              'Smart\nphones',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontFamily: 'Quicksand-Bold',
-                                color: Color(0xff128C7E),
-                              ),
+                          child: Text(
+                            'Smart\nphones',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 7.sp,
+                              fontFamily: 'Quicksand-Bold',
+                              color: const Color(0xff128C7E),
                             ),
                           ),
                         ),
@@ -135,14 +136,13 @@ class Home extends StatelessWidget {
                         ),
                         Container(
                           margin: const EdgeInsets.only(top: 4.0),
-                          child: const FittedBox(
-                            child: Text(
-                              'Wired\nHeadset',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontFamily: 'Quicksand-Bold',
-                                color: Color(0xff128C7E),
-                              ),
+                          child: Text(
+                            'Wired\nHeadset',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 7.sp,
+                              fontFamily: 'Quicksand-Bold',
+                              color: const Color(0xff128C7E),
                             ),
                           ),
                         ),
@@ -162,14 +162,13 @@ class Home extends StatelessWidget {
                         ),
                         Container(
                           margin: const EdgeInsets.only(top: 4.0),
-                          child: const FittedBox(
-                            child: Text(
-                              'Men\'s\nFashion',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontFamily: 'Quicksand-Bold',
-                                color: Color(0xff128C7E),
-                              ),
+                          child: Text(
+                            'Men\'s\nFashion',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 7.sp,
+                              fontFamily: 'Quicksand-Bold',
+                              color: const Color(0xff128C7E),
                             ),
                           ),
                         ),
@@ -189,14 +188,13 @@ class Home extends StatelessWidget {
                         ),
                         Container(
                           margin: const EdgeInsets.only(top: 4.0),
-                          child: const FittedBox(
-                            child: Text(
-                              'Women\'s\nFashion',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontFamily: 'Quicksand-Bold',
-                                color: Color(0xff128C7E),
-                              ),
+                          child: Text(
+                            'Women\'s\nFashion',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 7.sp,
+                              fontFamily: 'Quicksand-Bold',
+                              color: const Color(0xff128C7E),
                             ),
                           ),
                         ),
@@ -228,7 +226,7 @@ class Home extends StatelessWidget {
                           alignment: Alignment.center,
                           child: ClipRRect(
                             child: Image.asset('images/men1.jpg',
-                                fit: BoxFit.cover),
+                                width: screenWidth, fit: BoxFit.fitWidth),
                           ),
                         ),
                         Container(
@@ -236,7 +234,7 @@ class Home extends StatelessWidget {
                           child: ClipRRect(
                             // borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset('images/women1.jpg',
-                                fit: BoxFit.cover),
+                                width: screenWidth, fit: BoxFit.fitWidth),
                           ),
                         ),
                         Container(
@@ -245,7 +243,7 @@ class Home extends StatelessWidget {
                           child: ClipRRect(
                             // borderRadius: BorderRadius.circular(8.0),
                             child: Image.asset('images/tech1.jpg',
-                                fit: BoxFit.cover),
+                                width: screenWidth, fit: BoxFit.fitWidth),
                           ),
                         ),
                       ],
@@ -300,7 +298,7 @@ class Home extends StatelessWidget {
               height: screenHeight / 2.8,
               width: screenWidth,
               // color: Colors.green,
-              padding: const EdgeInsets.symmetric(vertical: 10.0),
+              padding: EdgeInsets.symmetric(vertical: 1.3.h),
               child: Container(
                 padding: const EdgeInsets.only(top: 4.0),
                 decoration: const BoxDecoration(
@@ -322,25 +320,28 @@ class Home extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
-                              margin: const EdgeInsets.only(left: 16.0),
+                              margin: EdgeInsets.only(left: 5.w),
                               alignment: Alignment.center,
-                              child: const Text(
+                              child: Text(
                                 'Deals For You',
                                 style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 18,
-                                    fontFamily: 'Quicksand-Bold'),
+                                    fontSize: 12.sp,
+                                    fontFamily: 'Quicksand-SemiBold'),
                               ),
                             ),
                             const Spacer(),
-                            IconButton(
-                              alignment: Alignment.topCenter,
-                              padding: const EdgeInsets.all(0),
-                              onPressed: () {},
-                              icon: const Icon(
-                                Icons.navigate_next,
-                                size: 30,
-                                color: Colors.white,
+                            Container(
+                              margin: EdgeInsets.only(right: 1.w),
+                              child: IconButton(
+                                alignment: Alignment.topCenter,
+                                padding: const EdgeInsets.all(0),
+                                onPressed: () {},
+                                icon: Icon(
+                                  Icons.navigate_next,
+                                  size: 4.h,
+                                  color: Colors.white,
+                                ),
                               ),
                             ),
                           ],
@@ -374,6 +375,8 @@ class Home extends StatelessWidget {
                                               BorderRadius.circular(8.0),
                                           child: Image.asset(
                                             'images/luxurybag1.jpg',
+                                            fit: BoxFit.fitWidth,
+                                            width: screenWidth,
                                           )),
                                     ),
                                     Container(
@@ -424,6 +427,8 @@ class Home extends StatelessWidget {
                                               BorderRadius.circular(8.0),
                                           child: Image.asset(
                                             'images/jacket1.jpg',
+                                            fit: BoxFit.fitWidth,
+                                            width: screenWidth,
                                           )),
                                     ),
                                     Container(
@@ -474,6 +479,8 @@ class Home extends StatelessWidget {
                                               BorderRadius.circular(8.0),
                                           child: Image.asset(
                                             'images/laptopsale1.jpg',
+                                            fit: BoxFit.fitWidth,
+                                            width: screenWidth,
                                           )),
                                     ),
                                     Container(
@@ -532,6 +539,8 @@ class Home extends StatelessWidget {
                                                 BorderRadius.circular(8.0),
                                             child: Image.asset(
                                               'images/luxurybag1.jpg',
+                                              fit: BoxFit.fitWidth,
+                                              width: screenWidth,
                                             )),
                                       ),
                                       Container(
@@ -584,6 +593,8 @@ class Home extends StatelessWidget {
                                                 BorderRadius.circular(8.0),
                                             child: Image.asset(
                                               'images/jacket1.jpg',
+                                              fit: BoxFit.fitWidth,
+                                              width: screenWidth,
                                             )),
                                       ),
                                       Container(
@@ -636,6 +647,8 @@ class Home extends StatelessWidget {
                                                 BorderRadius.circular(8.0),
                                             child: Image.asset(
                                               'images/laptopsale1.jpg',
+                                              fit: BoxFit.fitWidth,
+                                              width: screenWidth,
                                             )),
                                       ),
                                       Container(

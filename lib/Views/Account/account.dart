@@ -66,15 +66,15 @@ class Account extends StatelessWidget {
           Obx(
             () => Container(
               // color: Colors.orange,
-              height: 55.h,
+              height: 50.h,
               alignment: Alignment.topLeft,
               child: c.isAccount.value
                   ? Column(
                       children: [
                         Container(
-                          // margin: EdgeInsets.only(top: 1.h),
+                          margin: EdgeInsets.only(top: 0.3.h),
                           width: 100.w,
-                          height: 9.h,
+                          height: 8.2.h,
                           // color: Colors.green,
                           padding: EdgeInsets.symmetric(horizontal: 5.w),
                           child: Row(
@@ -101,7 +101,7 @@ class Account extends StatelessWidget {
                         Container(
                           // margin: EdgeInsets.only(top: 1.h),
                           width: 100.w,
-                          height: 9.h,
+                          height: 8.2.h,
                           // color: Colors.green,
                           padding: EdgeInsets.symmetric(horizontal: 5.w),
                           child: Row(
@@ -128,7 +128,7 @@ class Account extends StatelessWidget {
                         Container(
                           // margin: EdgeInsets.only(top: 1.h),
                           width: 100.w,
-                          height: 9.h,
+                          height: 8.2.h,
                           // color: Colors.green,
                           padding: EdgeInsets.symmetric(horizontal: 5.w),
                           child: Row(
@@ -155,7 +155,7 @@ class Account extends StatelessWidget {
                         Container(
                           // margin: EdgeInsets.only(top: 1.h),
                           width: 100.w,
-                          height: 9.h,
+                          height: 8.2.h,
                           // color: Colors.green,
                           padding: EdgeInsets.symmetric(horizontal: 5.w),
                           child: Row(
@@ -183,7 +183,7 @@ class Account extends StatelessWidget {
                         Container(
                           // margin: EdgeInsets.only(top: 1.h),
                           width: 100.w,
-                          height: 9.h,
+                          height: 8.2.h,
                           // color: Colors.green,
                           padding: EdgeInsets.symmetric(horizontal: 5.w),
                           child: Row(
@@ -211,7 +211,7 @@ class Account extends StatelessWidget {
                         Container(
                           // margin: EdgeInsets.only(top: 1.h),
                           width: 100.w,
-                          height: 9.h,
+                          height: 8.2.h,
                           // color: Colors.green,
                           padding: EdgeInsets.symmetric(horizontal: 5.w),
                           child: Row(
