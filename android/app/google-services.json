@@ -7,12 +7,25 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:551278337015:android:584fb98068617cd5a1acf2",
+        "mobilesdk_app_id": "1:551278337015:android:923a2b81917f3c7ca1acf2",
         "android_client_info": {
-          "package_name": "com.android.application"
+          "package_name": "com.example.ecostore"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "551278337015-a7flq7gv9apd9q8pt65a5cor6u9d93on.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ecostore",
+            "certificate_hash": "3fda54e53fd5be5e8a6acc7f12519498860da107"
+          }
+        },
+        {
+          "client_id": "551278337015-ac65ue1i4clfbb47ms9q3blsk0lmaqeo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAkAXkVwCAkuaYgQxqyNlugdWrNnzKklyg"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "551278337015-ac65ue1i4clfbb47ms9q3blsk0lmaqeo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
