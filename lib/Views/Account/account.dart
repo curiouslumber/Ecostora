@@ -371,34 +371,44 @@ class Account extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                Container(
-                                  // margin: EdgeInsets.only(top: 1.h),
-                                  width: 100.w,
-                                  height: 9.h,
-                                  // color: Colors.green,
-                                  padding:
-                                      EdgeInsets.symmetric(horizontal: 5.w),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      const Icon(
-                                        Icons.settings,
-                                        color: Color(0xff128C7E),
-                                        size: 30,
-                                      ),
-                                      Container(
-                                        margin: EdgeInsets.only(left: 5.w),
-                                        child: Text(
-                                          'Settings',
-                                          style: TextStyle(
-                                              fontFamily: 'Quicksand-SemiBold',
-                                              color: const Color(0xff128C7E),
-                                              fontSize: 16.sp),
+                                MaterialButton(
+                                  onPressed: () {
+                                    print("Pressed");
+                                  },
+                                  materialTapTargetSize:
+                                      MaterialTapTargetSize.shrinkWrap,
+                                  padding: const EdgeInsets.all(0),
+                                  child: Container(
+                                    // margin: EdgeInsets.only(top: 1.h),
+                                    width: 100.w,
+                                    height: 9.h,
+                                    // color: Colors.green,
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 5.w),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        const Icon(
+                                          Icons.settings,
+                                          color: Color(0xff128C7E),
+                                          size: 30,
                                         ),
-                                      ),
-                                    ],
+                                        Container(
+                                          margin: EdgeInsets.only(left: 5.w),
+                                          child: Text(
+                                            'Settings',
+                                            style: TextStyle(
+                                                fontFamily:
+                                                    'Quicksand-SemiBold',
+                                                color: const Color(0xff128C7E),
+                                                fontSize: 16.sp),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ],

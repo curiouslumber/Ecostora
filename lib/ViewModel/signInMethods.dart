@@ -24,7 +24,13 @@ class SignInMethods {
         accessToken: googleSignInAuthentication.accessToken,
         idToken: googleSignInAuthentication.idToken,
       );
-      await _auth.signInWithCredential(credential);
+      var userCredential = await _auth.signInWithCredential(credential);
+
+      String email = userCredential.user!.email!;
+
+      print("User signed in with email: $email");
+      print("Photo Url: ${userCredential.user!.photoURL}");
+
       c.signedIn.value = true;
       c.isAccount.value = true;
       c.isLoading.value = false;

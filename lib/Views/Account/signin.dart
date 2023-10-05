@@ -1,6 +1,5 @@
 import 'package:ecostore/ViewModel/controller.dart';
 import 'package:ecostore/ViewModel/signInMethods.dart';
-import 'package:ecostore/Views/Home/homepage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -242,8 +241,6 @@ class SignIn extends StatelessWidget {
                               SignInMethods service = SignInMethods();
                               try {
                                 await service.signInWithGoogle();
-                                Get.offAll(() => HomePage(),
-                                    duration: Duration.zero);
                               } catch (e) {
                                 if (e is FirebaseAuthException) {
                                   showMessage(e.message!);
