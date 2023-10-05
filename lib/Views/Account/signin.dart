@@ -101,7 +101,29 @@ class SignIn extends StatelessWidget {
                         fillColor: const Color(0xff128C7E),
                         filled: true,
                       ),
-                    )
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(right: 1.5.w),
+                      alignment: Alignment.topRight,
+                      // color: Colors.blue,
+                      child: MaterialButton(
+                          onPressed: () {
+                            print("pressed");
+                          },
+                          // color: Colors.pink,
+                          height: 3.2.h,
+                          materialTapTargetSize:
+                              MaterialTapTargetSize.shrinkWrap,
+                          padding: const EdgeInsets.all(0),
+                          child: Text(
+                            'Forgot Password?',
+                            style: TextStyle(
+                              fontFamily: 'Quicksand-SemiBold',
+                              fontSize: 11.sp,
+                              color: const Color(0xff128C7E),
+                            ),
+                          )),
+                    ),
                   ],
                 ),
               ),

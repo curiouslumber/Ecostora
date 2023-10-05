@@ -25,7 +25,15 @@ class MyApp extends StatelessWidget {
     });
 
     return Sizer(builder: (context, orientation, deviceType) {
+      const seedColor = Color(0xff128C7E);
+      final colorScheme = ColorScheme.fromSeed(
+        seedColor: seedColor,
+        brightness: Brightness.light,
+      );
+
       return GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(colorScheme: colorScheme),
         home: HomePage(),
       );
     });
