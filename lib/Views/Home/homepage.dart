@@ -1,4 +1,4 @@
-import 'package:ecostore/Models/controller.dart';
+import 'package:ecostore/ViewModel/controller.dart';
 import 'package:ecostore/Views/Account/account.dart';
 import 'package:ecostore/Views/Home/home.dart';
 import 'package:ecostore/Views/Home/sidebar.dart';
