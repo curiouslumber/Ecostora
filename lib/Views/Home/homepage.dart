@@ -2,6 +2,7 @@ import 'package:ecostore/ViewModel/controller.dart';
 import 'package:ecostore/Views/Account/account.dart';
 import 'package:ecostore/Views/Home/home.dart';
 import 'package:ecostore/Views/Home/sidebar.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,6 +14,19 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    FirebaseAuth.instance.authStateChanges().listen((User? user) {
+      if (user == null) {
+        print('User is currently signed out!');
+
+        c.isAccount.value = false;
+        c.signedIn.value = false;
+      } else {
+        print('User is signed in!');
+        c.isAccount.value = true;
+        c.signedIn.value = true;
+      }
+    });
+
     return Container(
       color: const Color(0xff128C7E),
       child: SafeArea(

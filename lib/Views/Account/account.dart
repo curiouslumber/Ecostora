@@ -1,6 +1,9 @@
 import 'package:ecostore/ViewModel/controller.dart';
+import 'package:ecostore/ViewModel/signInMethods.dart';
 import 'package:ecostore/Views/Account/register.dart';
 import 'package:ecostore/Views/Account/signin.dart';
+import 'package:ecostore/Views/Home/homepage.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
@@ -243,7 +246,18 @@ class Account extends StatelessWidget {
                                     materialTapTargetSize:
                                         MaterialTapTargetSize.shrinkWrap,
                                     padding: const EdgeInsets.all(0),
-                                    onPressed: () {},
+                                    onPressed: () async {
+                                      c.isLoading.value = true;
+                                      SignInMethods service = SignInMethods();
+                                      try {
+                                        await service.signOutFromGoogle();
+                                        Get.offAll(() => HomePage(),
+                                            duration: Duration.zero);
+                                      } catch (e) {
+                                        if (e is FirebaseAuthException) {}
+                                      }
+                                      c.isLoading.value = false;
+                                    },
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.start,
@@ -276,7 +290,7 @@ class Account extends StatelessWidget {
                               children: [
                                 MaterialButton(
                                   onPressed: () {
-                                    Get.to(() => const SignIn());
+                                    Get.to(() => SignIn());
                                   },
                                   materialTapTargetSize:
                                       MaterialTapTargetSize.shrinkWrap,
