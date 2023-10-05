@@ -7,7 +7,10 @@ class Controller extends GetxController {
   var signedIn = false.obs;
   var isLoading = false.obs;
 
-  // *Check internet connection
+  // HomePage variables
+  var fragmentIndex = 0.obs;
+
+  // Check internet connection
   var activeConnection = false.obs;
   Future checkUserConnection() async {
     try {
