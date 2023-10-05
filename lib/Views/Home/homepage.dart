@@ -9,7 +9,7 @@ import 'package:get/get.dart';
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
-  final pages = [const Home(), Account()];
+  final pages = [Home(), Account()];
   final c = Get.put(Controller());
 
   @override
@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
             centerTitle: true,
           ),
           drawer: const Sidebar(),
-          body: pages[1],
+          body: pages[0],
           bottomNavigationBar: BottomNavigationBar(
             elevation: 16.0,
             type: BottomNavigationBarType.fixed,
