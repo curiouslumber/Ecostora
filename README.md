@@ -8,5 +8,6 @@
 
 ## Technologies:
 - Flutter & Dart
+- MVVM Architecture
 - Figma for UI Design
 - Leonardo AI for Image Generation
