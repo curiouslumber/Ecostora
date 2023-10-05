@@ -12,6 +12,12 @@ class SignInMethods {
     try {
       final GoogleSignInAccount? googleSignInAccount =
           await _googleSignIn.signIn();
+      if (googleSignInAccount == null) {
+        //* Sign In Aborted
+        c.signedIn.value = false;
+        c.isAccount.value = false;
+        c.isLoading.value = false;
+      }
       final GoogleSignInAuthentication googleSignInAuthentication =
           await googleSignInAccount!.authentication;
       final AuthCredential credential = GoogleAuthProvider.credential(
@@ -19,13 +25,12 @@ class SignInMethods {
         idToken: googleSignInAuthentication.idToken,
       );
       await _auth.signInWithCredential(credential);
-
       c.signedIn.value = true;
       c.isAccount.value = true;
       c.isLoading.value = false;
-    } on FirebaseAuthException catch (e) {
+    } catch (e) {
       // ignore: avoid_print
-      print(e.message);
+      print(e.toString());
       rethrow;
     }
     return null;

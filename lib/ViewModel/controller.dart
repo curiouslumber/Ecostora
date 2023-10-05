@@ -5,6 +5,7 @@ class Controller extends GetxController {
   var isAccount = false.obs;
   var registerPageFlow = 0.obs;
   var signedIn = false.obs;
+  var signInAborted = false.obs;
   var isLoading = false.obs;
 
   // Check internet connection

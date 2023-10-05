@@ -14,16 +14,22 @@ class SignIn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xff128C7E),
-        foregroundColor: const Color(0xffFFFCCA),
-      ),
-      body: Container(
-        alignment: Alignment.center,
-        color: const Color(0xffFFFDDB),
-        child: Obx(
-          () => SingleChildScrollView(
+    return Obx(
+      () => Scaffold(
+        appBar: c.isLoading.value
+            ? AppBar(
+                backgroundColor: const Color(0xff128C7E),
+                foregroundColor: const Color(0xffFFFCCA),
+                leading: Container(),
+              )
+            : AppBar(
+                backgroundColor: const Color(0xff128C7E),
+                foregroundColor: const Color(0xffFFFCCA),
+              ),
+        body: Container(
+          alignment: Alignment.center,
+          color: const Color(0xffFFFDDB),
+          child: SingleChildScrollView(
             child: c.isLoading.value
                 ? const CircularProgressIndicator(
                     backgroundColor: Color(0xffFFFCCA),
