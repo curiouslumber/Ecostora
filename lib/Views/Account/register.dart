@@ -26,7 +26,7 @@ class Register extends StatelessWidget {
 
     return Obx(
       () => Scaffold(
-        appBar: c.showBackButton.value
+        appBar: c.showBackButton.value && c.registerPageFlow > 0
             ? AppBar(
                 backgroundColor: const Color(0xff128C7E),
                 foregroundColor: const Color(0xffFFFCCA),
@@ -34,7 +34,13 @@ class Register extends StatelessWidget {
                   onPressed: () {
                     // ignore: use_build_context_synchronously
                     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                      content: Text("Registration Aborted"),
+                      content: Text(
+                        "Registration Aborted",
+                        style: TextStyle(
+                            color: Color(0xffFFFCCA),
+                            fontFamily: 'Quicksand-SemiBold'),
+                      ),
+                      backgroundColor: Color(0xff128C7E),
                     ));
                     Navigator.of(context).pop();
                   },
