@@ -55,7 +55,6 @@ class HomePage extends StatelessWidget {
             bottomNavigationBar: BottomNavigationBar(
               currentIndex: c.fragmentIndex.value,
               onTap: (value) {
-                print(value);
                 c.fragmentIndex.value = value;
               },
               elevation: 16.0,
