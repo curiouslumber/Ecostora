@@ -1,5 +1,6 @@
 import 'package:ecostore/ViewModel/controller.dart';
 import 'package:ecostore/ViewModel/signInMethods.dart';
+import 'package:ecostore/Views/Home/homepage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -241,13 +242,18 @@ class SignIn extends StatelessWidget {
                               SignInMethods service = SignInMethods();
                               try {
                                 await service.signInWithGoogle();
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(const SnackBar(
+                                  content: Text("Signed In Successfully"),
+                                ));
+                                c.fragmentIndex.value = 0;
+                                Get.to(() => HomePage());
                               } catch (e) {
                                 if (e is FirebaseAuthException) {
                                   showMessage(e.message!);
                                 }
                               }
                             }
-                            print("Button Pressed");
                           },
                           height: 8.h,
                           color: const Color(0xff128C7E),

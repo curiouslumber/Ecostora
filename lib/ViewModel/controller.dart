@@ -7,10 +7,6 @@ class Controller extends GetxController {
   var signedIn = false.obs;
   var isLoading = false.obs;
 
-  // SignUpWithGoogle variables
-  var showBackButton = false.obs;
-  var signUpWithGoogleProcess = false.obs;
-
   // HomePage variables
   var fragmentIndex = 0.obs;
 

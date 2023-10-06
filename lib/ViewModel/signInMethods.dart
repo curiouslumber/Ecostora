@@ -1,4 +1,5 @@
 import 'package:ecostore/ViewModel/controller.dart';
+import 'package:ecostore/ViewModel/firestoredb.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -7,6 +8,21 @@ class SignInMethods {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GoogleSignIn _googleSignIn = GoogleSignIn();
   final c = Get.put(Controller());
+
+  Future<UserCredential?> registerWithEmailAndPassword(
+      String email, String password) async {
+    try {
+      UserCredential userCredential =
+          await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return userCredential;
+    } catch (e) {
+      print('Error registering user: $e');
+    }
+    return null;
+  }
 
   Future<String?> signInWithGoogle() async {
     try {
@@ -26,10 +42,13 @@ class SignInMethods {
       );
       var userCredential = await _auth.signInWithCredential(credential);
 
-      String email = userCredential.user!.email!;
+      FirestoreDB f = FirestoreDB();
 
-      print("User signed in with email: $email");
-      print("Photo Url: ${userCredential.user!.photoURL}");
+      f.addCustomNamedDocument(
+          userCredential.user!.photoURL.toString(),
+          userCredential.user!.displayName.toString(),
+          userCredential.user!.email.toString(),
+          'Google');
 
       c.signedIn.value = true;
       c.isAccount.value = true;
@@ -40,6 +59,21 @@ class SignInMethods {
       rethrow;
     }
     return null;
+  }
+
+  Future<UserCredential?> signInWithEmailPassword(
+      String email, String password) async {
+    try {
+      UserCredential userCredential =
+          await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return userCredential;
+    } catch (e) {
+      print("Error: $e");
+      return null;
+    }
   }
 
   Future<void> signOutFromGoogle() async {
