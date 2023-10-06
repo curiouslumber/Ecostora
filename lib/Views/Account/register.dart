@@ -13,6 +13,17 @@ class Register extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController fullnameController = TextEditingController();
+    TextEditingController usernameController = TextEditingController();
+    TextEditingController emailController = TextEditingController();
+    TextEditingController passwordController = TextEditingController();
+    TextEditingController confirmPasswordController = TextEditingController();
+    TextEditingController phoneNumber = TextEditingController();
+    var selectedCountry = "India";
+    var state = "Maharashtra";
+    var city = "Mumbai";
+    TextEditingController pincodeController = TextEditingController();
+
     return Obx(
       () => Scaffold(
         appBar: c.showBackButton.value
@@ -75,6 +86,7 @@ class Register extends StatelessWidget {
                                     ),
                                   ),
                                   TextFormField(
+                                    controller: fullnameController,
                                     decoration: InputDecoration(
                                       enabledBorder: OutlineInputBorder(
                                         borderRadius: const BorderRadius.all(
@@ -120,6 +132,7 @@ class Register extends StatelessWidget {
                                     ),
                                   ),
                                   TextFormField(
+                                    controller: usernameController,
                                     decoration: InputDecoration(
                                       enabledBorder: OutlineInputBorder(
                                         borderRadius: const BorderRadius.all(
@@ -311,6 +324,7 @@ class Register extends StatelessWidget {
                                         ),
                                       ),
                                       TextFormField(
+                                        controller: emailController,
                                         decoration: InputDecoration(
                                           enabledBorder: OutlineInputBorder(
                                             borderRadius:
@@ -359,6 +373,7 @@ class Register extends StatelessWidget {
                                         ),
                                       ),
                                       TextFormField(
+                                        controller: passwordController,
                                         decoration: InputDecoration(
                                           enabledBorder: OutlineInputBorder(
                                             borderRadius:
@@ -407,6 +422,7 @@ class Register extends StatelessWidget {
                                         ),
                                       ),
                                       TextFormField(
+                                        controller: confirmPasswordController,
                                         decoration: InputDecoration(
                                           enabledBorder: OutlineInputBorder(
                                             borderRadius:
@@ -529,45 +545,67 @@ class Register extends StatelessWidget {
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.center,
                                             children: [
-                                              SizedBox(
-                                                width: 20.w,
-                                                child: TextFormField(
-                                                  decoration: InputDecoration(
-                                                    enabledBorder:
-                                                        OutlineInputBorder(
-                                                      borderRadius:
-                                                          const BorderRadius
-                                                              .all(
-                                                              Radius.circular(
-                                                                  8.0)),
-                                                      borderSide: BorderSide(
-                                                          color: const Color
-                                                                  .fromARGB(0,
-                                                                  102, 102, 102)
-                                                              .withOpacity(0.2),
-                                                          width: 0.0),
-                                                    ),
-                                                    focusedBorder:
-                                                        OutlineInputBorder(
-                                                      borderRadius:
-                                                          const BorderRadius
-                                                              .all(
-                                                              Radius.circular(
-                                                                  8.0)),
-                                                      borderSide: BorderSide(
-                                                          color: Colors.white
-                                                              .withOpacity(0.2),
-                                                          width: 0.0),
-                                                    ),
-                                                    fillColor:
-                                                        const Color(0xff128C7E),
-                                                    filled: true,
-                                                  ),
+                                              Container(
+                                                alignment: Alignment.center,
+                                                height: 9.5.h,
+                                                decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            8.0),
+                                                    color: const Color(
+                                                        0xff128C7E)),
+                                                width: 25.w,
+                                                margin:
+                                                    EdgeInsets.only(right: 2.w),
+                                                padding: EdgeInsets.only(
+                                                    left: 1.9.w),
+                                                child: DropdownButton<String>(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          8.0),
+                                                  padding: EdgeInsets.zero,
+                                                  dropdownColor:
+                                                      const Color(0xff128C7E),
+                                                  underline:
+                                                      Container(), // Removes the underline
+                                                  icon: const Icon(
+                                                    Icons.arrow_drop_down,
+                                                    color: Color(0xffFFFDDB),
+                                                  ), // Add your custom icon
+                                                  value:
+                                                      'Option 1', // Set the initially selected value
+                                                  onChanged:
+                                                      (String? newValue) {
+                                                    // Handle dropdown item selection
+                                                  },
+                                                  items: <String>[
+                                                    'Option 1',
+                                                    'Option 2',
+                                                    'Option 3'
+                                                  ].map<
+                                                          DropdownMenuItem<
+                                                              String>>(
+                                                      (String value) {
+                                                    return DropdownMenuItem<
+                                                        String>(
+                                                      value: value,
+                                                      child: Text(
+                                                        value,
+                                                        style: TextStyle(
+                                                            color: const Color(
+                                                                0xffFFFDDB),
+                                                            fontSize: 12.sp,
+                                                            fontFamily:
+                                                                'Quicksand-SemiBold'),
+                                                      ),
+                                                    );
+                                                  }).toList(),
                                                 ),
                                               ),
                                               SizedBox(
-                                                width: 45.w,
+                                                width: 43.w,
                                                 child: TextFormField(
+                                                  controller: phoneNumber,
                                                   decoration: InputDecoration(
                                                     enabledBorder:
                                                         OutlineInputBorder(
@@ -642,47 +680,60 @@ class Register extends StatelessWidget {
                                                               'Quicksand-SemiBold'),
                                                     ),
                                                   ),
-                                                  SizedBox(
-                                                    width: 32.w,
-                                                    child: TextFormField(
-                                                      decoration:
-                                                          InputDecoration(
-                                                        enabledBorder:
-                                                            OutlineInputBorder(
-                                                          borderRadius:
-                                                              const BorderRadius
-                                                                  .all(Radius
-                                                                      .circular(
-                                                                          8.0)),
-                                                          borderSide: BorderSide(
-                                                              color: const Color
-                                                                      .fromARGB(
-                                                                      0,
-                                                                      102,
-                                                                      102,
-                                                                      102)
-                                                                  .withOpacity(
-                                                                      0.2),
-                                                              width: 0.0),
-                                                        ),
-                                                        focusedBorder:
-                                                            OutlineInputBorder(
-                                                          borderRadius:
-                                                              const BorderRadius
-                                                                  .all(Radius
-                                                                      .circular(
-                                                                          8.0)),
-                                                          borderSide: BorderSide(
-                                                              color: Colors
-                                                                  .white
-                                                                  .withOpacity(
-                                                                      0.2),
-                                                              width: 0.0),
-                                                        ),
-                                                        fillColor: const Color(
+                                                  Container(
+                                                    decoration: BoxDecoration(
+                                                        color: const Color(
                                                             0xff128C7E),
-                                                        filled: true,
-                                                      ),
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(8.0)),
+                                                    height: 9.5.h,
+                                                    width: 32.w,
+                                                    alignment: Alignment.center,
+                                                    child:
+                                                        DropdownButton<String>(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              8.0),
+                                                      padding: EdgeInsets.zero,
+                                                      dropdownColor:
+                                                          const Color(
+                                                              0xff128C7E),
+                                                      underline:
+                                                          Container(), // Removes the underline
+                                                      icon: const Icon(
+                                                        Icons.arrow_drop_down,
+                                                        color:
+                                                            Color(0xffFFFDDB),
+                                                      ), // Add your custom icon
+                                                      value:
+                                                          'Option 1', // Set the initially selected value
+                                                      onChanged:
+                                                          (String? newValue) {
+                                                        // Handle dropdown item selection
+                                                      },
+                                                      items: <String>[
+                                                        'Option 1',
+                                                        'Option 2',
+                                                        'Option 3'
+                                                      ].map<
+                                                              DropdownMenuItem<
+                                                                  String>>(
+                                                          (String value) {
+                                                        return DropdownMenuItem<
+                                                            String>(
+                                                          value: value,
+                                                          child: Text(
+                                                            value,
+                                                            style: TextStyle(
+                                                                color: const Color(
+                                                                    0xffFFFDDB),
+                                                                fontSize: 12.sp,
+                                                                fontFamily:
+                                                                    'Quicksand-SemiBold'),
+                                                          ),
+                                                        );
+                                                      }).toList(),
                                                     ),
                                                   ),
                                                 ],
@@ -709,47 +760,60 @@ class Register extends StatelessWidget {
                                                               'Quicksand-SemiBold'),
                                                     ),
                                                   ),
-                                                  SizedBox(
-                                                    width: 32.w,
-                                                    child: TextFormField(
-                                                      decoration:
-                                                          InputDecoration(
-                                                        enabledBorder:
-                                                            OutlineInputBorder(
-                                                          borderRadius:
-                                                              const BorderRadius
-                                                                  .all(Radius
-                                                                      .circular(
-                                                                          8.0)),
-                                                          borderSide: BorderSide(
-                                                              color: const Color
-                                                                      .fromARGB(
-                                                                      0,
-                                                                      102,
-                                                                      102,
-                                                                      102)
-                                                                  .withOpacity(
-                                                                      0.2),
-                                                              width: 0.0),
-                                                        ),
-                                                        focusedBorder:
-                                                            OutlineInputBorder(
-                                                          borderRadius:
-                                                              const BorderRadius
-                                                                  .all(Radius
-                                                                      .circular(
-                                                                          8.0)),
-                                                          borderSide: BorderSide(
-                                                              color: Colors
-                                                                  .white
-                                                                  .withOpacity(
-                                                                      0.2),
-                                                              width: 0.0),
-                                                        ),
-                                                        fillColor: const Color(
+                                                  Container(
+                                                    decoration: BoxDecoration(
+                                                        color: const Color(
                                                             0xff128C7E),
-                                                        filled: true,
-                                                      ),
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(8.0)),
+                                                    height: 9.5.h,
+                                                    width: 32.w,
+                                                    alignment: Alignment.center,
+                                                    child:
+                                                        DropdownButton<String>(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              8.0),
+                                                      padding: EdgeInsets.zero,
+                                                      dropdownColor:
+                                                          const Color(
+                                                              0xff128C7E),
+                                                      underline:
+                                                          Container(), // Removes the underline
+                                                      icon: const Icon(
+                                                        Icons.arrow_drop_down,
+                                                        color:
+                                                            Color(0xffFFFDDB),
+                                                      ), // Add your custom icon
+                                                      value:
+                                                          'Option 1', // Set the initially selected value
+                                                      onChanged:
+                                                          (String? newValue) {
+                                                        // Handle dropdown item selection
+                                                      },
+                                                      items: <String>[
+                                                        'Option 1',
+                                                        'Option 2',
+                                                        'Option 3'
+                                                      ].map<
+                                                              DropdownMenuItem<
+                                                                  String>>(
+                                                          (String value) {
+                                                        return DropdownMenuItem<
+                                                            String>(
+                                                          value: value,
+                                                          child: Text(
+                                                            value,
+                                                            style: TextStyle(
+                                                                color: const Color(
+                                                                    0xffFFFDDB),
+                                                                fontSize: 12.sp,
+                                                                fontFamily:
+                                                                    'Quicksand-SemiBold'),
+                                                          ),
+                                                        );
+                                                      }).toList(),
                                                     ),
                                                   ),
                                                 ],
@@ -795,47 +859,60 @@ class Register extends StatelessWidget {
                                                               'Quicksand-SemiBold'),
                                                     ),
                                                   ),
-                                                  SizedBox(
-                                                    width: 32.w,
-                                                    child: TextFormField(
-                                                      decoration:
-                                                          InputDecoration(
-                                                        enabledBorder:
-                                                            OutlineInputBorder(
-                                                          borderRadius:
-                                                              const BorderRadius
-                                                                  .all(Radius
-                                                                      .circular(
-                                                                          8.0)),
-                                                          borderSide: BorderSide(
-                                                              color: const Color
-                                                                      .fromARGB(
-                                                                      0,
-                                                                      102,
-                                                                      102,
-                                                                      102)
-                                                                  .withOpacity(
-                                                                      0.2),
-                                                              width: 0.0),
-                                                        ),
-                                                        focusedBorder:
-                                                            OutlineInputBorder(
-                                                          borderRadius:
-                                                              const BorderRadius
-                                                                  .all(Radius
-                                                                      .circular(
-                                                                          8.0)),
-                                                          borderSide: BorderSide(
-                                                              color: Colors
-                                                                  .white
-                                                                  .withOpacity(
-                                                                      0.2),
-                                                              width: 0.0),
-                                                        ),
-                                                        fillColor: const Color(
+                                                  Container(
+                                                    decoration: BoxDecoration(
+                                                        color: const Color(
                                                             0xff128C7E),
-                                                        filled: true,
-                                                      ),
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(8.0)),
+                                                    height: 9.5.h,
+                                                    width: 32.w,
+                                                    alignment: Alignment.center,
+                                                    child:
+                                                        DropdownButton<String>(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              8.0),
+                                                      padding: EdgeInsets.zero,
+                                                      dropdownColor:
+                                                          const Color(
+                                                              0xff128C7E),
+                                                      underline:
+                                                          Container(), // Removes the underline
+                                                      icon: const Icon(
+                                                        Icons.arrow_drop_down,
+                                                        color:
+                                                            Color(0xffFFFDDB),
+                                                      ), // Add your custom icon
+                                                      value:
+                                                          'Option 1', // Set the initially selected value
+                                                      onChanged:
+                                                          (String? newValue) {
+                                                        // Handle dropdown item selection
+                                                      },
+                                                      items: <String>[
+                                                        'Option 1',
+                                                        'Option 2',
+                                                        'Option 3'
+                                                      ].map<
+                                                              DropdownMenuItem<
+                                                                  String>>(
+                                                          (String value) {
+                                                        return DropdownMenuItem<
+                                                            String>(
+                                                          value: value,
+                                                          child: Text(
+                                                            value,
+                                                            style: TextStyle(
+                                                                color: const Color(
+                                                                    0xffFFFDDB),
+                                                                fontSize: 12.sp,
+                                                                fontFamily:
+                                                                    'Quicksand-SemiBold'),
+                                                          ),
+                                                        );
+                                                      }).toList(),
                                                     ),
                                                   ),
                                                 ],
@@ -865,6 +942,8 @@ class Register extends StatelessWidget {
                                                   SizedBox(
                                                     width: 32.w,
                                                     child: TextFormField(
+                                                      controller:
+                                                          pincodeController,
                                                       decoration:
                                                           InputDecoration(
                                                         enabledBorder:
@@ -1248,6 +1327,7 @@ class Register extends StatelessWidget {
                                                 ),
                                               ),
                                               TextFormField(
+                                                controller: usernameController,
                                                 cursorColor:
                                                     const Color(0xffFFFCCA),
                                                 style: const TextStyle(
