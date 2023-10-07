@@ -1,4 +1,5 @@
 import 'package:ecostore/ViewModel/controller.dart';
+import 'package:ecostore/ViewModel/firestoredb.dart';
 import 'package:ecostore/ViewModel/signInMethods.dart';
 import 'package:ecostore/Views/Account/register.dart';
 import 'package:ecostore/Views/Account/signin.dart';
@@ -13,8 +14,35 @@ class Account extends StatelessWidget {
 
   final c = Get.put(Controller());
 
+  final f = FirestoreDB();
+
+  checkUser() async {
+    String? userEmail = await f.signInData();
+
+    if (userEmail != null) {
+      // print("User email : " + userEmail);
+      List<String> data = await f.signInData1(userEmail);
+      c.email.value = userEmail;
+      if (data.isNotEmpty) {
+        c.name.value = data.elementAt(0);
+        c.photoUrl.value = data.elementAt(1);
+        print(c.name.value + " " + c.email.value + " " + c.photoUrl.value);
+        if (c.photoUrl.value == "null") {
+          print("null value");
+        }
+      }
+    } else {
+      c.email.value = "";
+      c.name.value = "";
+      c.photoUrl.value = "null";
+      // print("User not signed in");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    checkUser();
+
     return Obx(
       () => Container(
         color: const Color(0xffFFFDDB),
@@ -39,8 +67,22 @@ class Account extends StatelessWidget {
                       children: [
                         Container(
                           height: 15.h,
+                          alignment: Alignment.center,
                           decoration: const BoxDecoration(
                               color: Colors.white, shape: BoxShape.circle),
+                          child: c.photoUrl.value != "null"
+                              ? ClipOval(
+                                  child: Image.network(c.photoUrl.value),
+                                )
+                              : IconButton(
+                                  padding: EdgeInsets.zero,
+                                  onPressed: () {},
+                                  icon: const Icon(
+                                    Icons.upload,
+                                    size: 40,
+                                    color: Color(0xff128C7E),
+                                  ),
+                                ),
                         ),
                         Obx(
                           () => Container(
@@ -49,7 +91,7 @@ class Account extends StatelessWidget {
                                 : EdgeInsets.only(top: 2.h),
                             child: Text(
                               c.isAccount.value
-                                  ? 'Noel Pinto'
+                                  ? (c.name.value != "" ? c.name.value : "")
                                   : 'Not logged in',
                               style: TextStyle(
                                   color: Colors.white,
@@ -63,7 +105,7 @@ class Account extends StatelessWidget {
                               ? Container(
                                   margin: EdgeInsets.only(top: 0.3.h),
                                   child: Text(
-                                    'noelpinto47@gmail.com',
+                                    c.email.value != "" ? c.email.value : "",
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontFamily: 'Quicksand-SemiBold',

@@ -1,6 +1,6 @@
 // ignore_for_file: avoid_print
-
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class FirestoreDB {
   void addCustomNamedDocument(
@@ -61,5 +61,56 @@ class FirestoreDB {
       print('Error fetching document: $e');
     }
     return null;
+  }
+
+  Future<String?> signInData() async {
+    try {
+      // Get the currently signed-in user
+      User? user = FirebaseAuth.instance.currentUser;
+
+      if (user != null) {
+        // Retrieve the user's email
+        String? email = user.email;
+
+        if (email != null) {
+          return email;
+        } else {
+          return null; // User's email is null
+        }
+      } else {
+        return null; // No user signed in
+      }
+    } catch (e) {
+      print('Error retrieving user data: $e');
+      return null; // Handle errors appropriately
+    }
+  }
+
+  Future<List<String>> signInData1(String userEmail) async {
+    List<String> data = List.empty(growable: true);
+    try {
+      // Reference to the "users" collection
+      CollectionReference users =
+          FirebaseFirestore.instance.collection('users');
+
+      // Get the document snapshot
+      DocumentSnapshot userSnapshot = await users.doc(userEmail).get();
+
+      if (userSnapshot.exists) {
+        // Access 'name' and 'photoUrl' fields
+        String userName = userSnapshot.get('name');
+        String photoUrl = userSnapshot.get('photoUrl');
+        data.add(userName);
+        data.add(photoUrl);
+
+        return data;
+      } else {
+        print('User document not found');
+        return data;
+      }
+    } catch (e) {
+      print('Error retrieving user data: $e');
+      return data;
+    }
   }
 }

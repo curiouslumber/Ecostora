@@ -12,6 +12,12 @@ class Controller extends GetxController {
 
   // Check internet connection
   var activeConnection = false.obs;
+
+  // Signed In User Data
+  var email = "".obs;
+  var name = "".obs;
+  var photoUrl = "null".obs;
+
   Future checkUserConnection() async {
     try {
       final result = await InternetAddress.lookup('google.com');
