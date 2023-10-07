@@ -92,9 +92,7 @@ class Home extends StatelessWidget {
                                 MaterialTapTargetSize.shrinkWrap,
                             padding: const EdgeInsets.all(0),
                             height: screenHeight / 20,
-                            onPressed: () {
-                              print("Button pressed");
-                            },
+                            onPressed: () {},
                             child: Container(
                               decoration: const BoxDecoration(
                                 color: Colors.white,

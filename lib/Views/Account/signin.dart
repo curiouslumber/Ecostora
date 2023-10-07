@@ -1,4 +1,5 @@
 import 'package:ecostore/ViewModel/controller.dart';
+import 'package:ecostore/ViewModel/firestoredb.dart';
 import 'package:ecostore/ViewModel/signInMethods.dart';
 import 'package:ecostore/Views/Home/homepage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -14,6 +15,9 @@ class SignIn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController emailController = TextEditingController();
+    TextEditingController passwordController = TextEditingController();
+
     return Obx(
       () => Scaffold(
         appBar: c.isLoading.value
@@ -63,6 +67,7 @@ class SignIn extends StatelessWidget {
                                   fontFamily: 'Quicksand-SemiBold'),
                             ),
                             TextFormField(
+                              controller: emailController,
                               decoration: InputDecoration(
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius: const BorderRadius.all(
@@ -104,6 +109,7 @@ class SignIn extends StatelessWidget {
                                   fontFamily: 'Quicksand-SemiBold'),
                             ),
                             TextFormField(
+                              controller: passwordController,
                               decoration: InputDecoration(
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius: const BorderRadius.all(
@@ -130,9 +136,7 @@ class SignIn extends StatelessWidget {
                               alignment: Alignment.topRight,
                               // color: Colors.blue,
                               child: MaterialButton(
-                                  onPressed: () {
-                                    print("pressed");
-                                  },
+                                  onPressed: () {},
                                   // color: Colors.pink,
                                   height: 3.2.h,
                                   materialTapTargetSize:
@@ -155,8 +159,45 @@ class SignIn extends StatelessWidget {
                         child: MaterialButton(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8.0)),
-                          onPressed: () {
-                            print("Button Pressed");
+                          onPressed: () async {
+                            SignInMethods s = SignInMethods();
+                            FirestoreDB f = FirestoreDB();
+
+                            var emailExist =
+                                await f.doesDocumentExist(emailController.text);
+                            if (emailExist) {
+                              String? res = await s.signInWithEmailPassword(
+                                  emailController.text,
+                                  passwordController.text);
+                              if (res != null) {
+                                if (res == "success") {
+                                  // ignore: use_build_context_synchronously
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(const SnackBar(
+                                    content: Text("Signed In Successfully"),
+                                  ));
+                                  c.fragmentIndex.value = 0;
+                                  Get.offAll(() => HomePage());
+                                } else if (res
+                                    .contains("INVALID_LOGIN_CREDENTIALS")) {
+                                  // ignore: use_build_context_synchronously
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(const SnackBar(
+                                    content: Text(
+                                        "Incorrect Password. Please try again."),
+                                  ));
+                                }
+                              } else {
+                                // ignore: avoid_print
+                                print(res);
+                              }
+                            } else {
+                              // ignore: use_build_context_synchronously
+                              ScaffoldMessenger.of(context)
+                                  .showSnackBar(const SnackBar(
+                                content: Text("Email is not registered"),
+                              ));
+                            }
                           },
                           height: 8.h,
                           color: const Color(0xff128C7E),
@@ -242,6 +283,7 @@ class SignIn extends StatelessWidget {
                               SignInMethods service = SignInMethods();
                               try {
                                 await service.signInWithGoogle();
+                                // ignore: use_build_context_synchronously
                                 ScaffoldMessenger.of(context)
                                     .showSnackBar(const SnackBar(
                                   content: Text("Signed In Successfully"),

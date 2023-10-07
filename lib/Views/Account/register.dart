@@ -305,7 +305,7 @@ class Register extends StatelessWidget {
                                           await m.registerWithEmailAndPassword(
                                               emailController.text,
                                               passwordController.text);
-                                      if (userCredential != null) {
+                                      if (userCredential == "success") {
                                         f.addCustomNamedDocument(
                                             "null",
                                             fullnameController.text,
@@ -317,10 +317,20 @@ class Register extends StatelessWidget {
                                           content:
                                               Text("Registered Successfully"),
                                         ));
-
-                                        Get.to(() => HomePage());
-                                      } else {
-                                        // Sign-in failed, show error message.
+                                        c.fragmentIndex.value = 0;
+                                        Get.offAll(() => HomePage());
+                                      } else if (userCredential ==
+                                          "email-already-in-use") {
+                                        var loginType = await f
+                                            .getLoginType(emailController.text);
+                                        if (loginType != null) {
+                                          // ignore: use_build_context_synchronously
+                                          ScaffoldMessenger.of(context)
+                                              .showSnackBar(SnackBar(
+                                            content: Text(
+                                                "Email Already in Use via $loginType Sign In"),
+                                          ));
+                                        }
                                       }
                                     },
                                     height: 8.h,

@@ -1,3 +1,4 @@
+// ignore_for_file: avoid_print, file_names
 import 'package:ecostore/ViewModel/controller.dart';
 import 'package:ecostore/ViewModel/firestoredb.dart';
 import 'package:get/get.dart';
@@ -9,16 +10,19 @@ class SignInMethods {
   final GoogleSignIn _googleSignIn = GoogleSignIn();
   final c = Get.put(Controller());
 
-  Future<UserCredential?> registerWithEmailAndPassword(
+  Future<String?> registerWithEmailAndPassword(
       String email, String password) async {
     try {
-      UserCredential userCredential =
-          await FirebaseAuth.instance.createUserWithEmailAndPassword(
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: email,
         password: password,
       );
-      return userCredential;
+      return "success";
     } catch (e) {
+      if (e.toString().contains("email-already-in-use")) {
+        return "email-already-in-use";
+      }
+
       print('Error registering user: $e');
     }
     return null;
@@ -54,25 +58,22 @@ class SignInMethods {
       c.isAccount.value = true;
       c.isLoading.value = false;
     } catch (e) {
-      // ignore: avoid_print
       print(e.toString());
       rethrow;
     }
     return null;
   }
 
-  Future<UserCredential?> signInWithEmailPassword(
-      String email, String password) async {
+  Future<String?> signInWithEmailPassword(String email, String password) async {
     try {
-      UserCredential userCredential =
-          await FirebaseAuth.instance.signInWithEmailAndPassword(
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: email,
         password: password,
       );
-      return userCredential;
+
+      return "success";
     } catch (e) {
-      print("Error: $e");
-      return null;
+      return e.toString();
     }
   }
 
