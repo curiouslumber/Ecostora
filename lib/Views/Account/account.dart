@@ -26,10 +26,6 @@ class Account extends StatelessWidget {
       if (data.isNotEmpty) {
         c.name.value = data.elementAt(0);
         c.photoUrl.value = data.elementAt(1);
-        print(c.name.value + " " + c.email.value + " " + c.photoUrl.value);
-        if (c.photoUrl.value == "null") {
-          print("null value");
-        }
       }
     } else {
       c.email.value = "";
