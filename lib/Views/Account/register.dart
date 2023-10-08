@@ -5,10 +5,16 @@ import 'package:ecostore/Views/Home/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
+import 'package:string_validator/string_validator.dart';
 
-class Register extends StatelessWidget {
-  Register({super.key});
+class Register extends StatefulWidget {
+  const Register({super.key});
+  @override
+  RegisterPageState createState() => RegisterPageState();
+}
 
+class RegisterPageState extends State<Register> {
+  final _formKey = GlobalKey<FormState>();
   final c = Get.put(Controller());
 
   @override
@@ -39,141 +45,219 @@ class Register extends StatelessWidget {
                 )
               : SingleChildScrollView(
                   child: c.registerPageFlow.value == 0
-                      ? Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Register',
-                              style: TextStyle(
-                                  color: const Color(0xff128C7E),
-                                  fontSize: 24.sp,
-                                  fontFamily: 'Quicksand-SemiBold'),
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(top: 4.h),
-                              alignment: Alignment.centerLeft,
-                              // color: Colors.blue,
-                              width: 70.w,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.only(bottom: 0.5.h),
-                                    child: Text(
-                                      'Full Name',
-                                      style: TextStyle(
-                                          fontSize: 16.sp,
-                                          color: const Color(0xff128C7E),
-                                          fontFamily: 'Quicksand-SemiBold'),
-                                    ),
-                                  ),
-                                  TextFormField(
-                                    controller: fullnameController,
-                                    enableSuggestions: true,
-                                    cursorWidth: 1.8,
-                                    cursorColor: const Color(0xffFFFCCA),
-                                    style: const TextStyle(
-                                        color: Color(0xffFFFCCA),
-                                        fontFamily: 'Quicksand-SemiBold'),
-                                    decoration: InputDecoration(
-                                      enabledBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(8.0)),
-                                        borderSide: BorderSide(
-                                            color: const Color.fromARGB(
-                                                    0, 102, 102, 102)
-                                                .withOpacity(0.2),
-                                            width: 0.0),
-                                      ),
-                                      focusedBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(8.0)),
-                                        borderSide: BorderSide(
-                                            color:
-                                                Colors.white.withOpacity(0.2),
-                                            width: 0.0),
-                                      ),
-                                      fillColor: const Color(0xff128C7E),
-                                      filled: true,
-                                    ),
-                                  )
-                                ],
+                      ? Form(
+                          key: _formKey,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                'Register',
+                                style: TextStyle(
+                                    color: const Color(0xff128C7E),
+                                    fontSize: 24.sp,
+                                    fontFamily: 'Quicksand-SemiBold'),
                               ),
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(top: 4.h),
-                              alignment: Alignment.centerLeft,
-                              // color: Colors.blue,
-                              width: 70.w,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.only(bottom: 0.5.h),
-                                    child: Text(
-                                      'Email Address',
-                                      style: TextStyle(
-                                          fontSize: 16.sp,
-                                          color: const Color(0xff128C7E),
+                              Container(
+                                margin: EdgeInsets.only(top: 4.h),
+                                alignment: Alignment.centerLeft,
+                                // color: Colors.blue,
+                                width: 70.w,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      margin: EdgeInsets.only(bottom: 0.5.h),
+                                      child: Text(
+                                        'Full Name',
+                                        style: TextStyle(
+                                            fontSize: 16.sp,
+                                            color: const Color(0xff128C7E),
+                                            fontFamily: 'Quicksand-SemiBold'),
+                                      ),
+                                    ),
+                                    TextFormField(
+                                      controller: fullnameController,
+                                      validator: (value) {
+                                        if (value == null || value.isEmpty) {
+                                          return '* Missing Field';
+                                        }
+                                        return null;
+                                      },
+                                      enableSuggestions: true,
+                                      cursorWidth: 1.8,
+                                      cursorColor: const Color(0xffFFFCCA),
+                                      style: const TextStyle(
+                                          color: Color(0xffFFFCCA),
                                           fontFamily: 'Quicksand-SemiBold'),
-                                    ),
-                                  ),
-                                  TextFormField(
-                                    controller: emailController,
-                                    enableSuggestions: true,
-                                    cursorWidth: 1.8,
-                                    cursorColor: const Color(0xffFFFCCA),
-                                    style: const TextStyle(
-                                        color: Color(0xffFFFCCA),
-                                        fontFamily: 'Quicksand-SemiBold'),
-                                    decoration: InputDecoration(
-                                      enabledBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(8.0)),
-                                        borderSide: BorderSide(
-                                            color: const Color.fromARGB(
-                                                    0, 102, 102, 102)
-                                                .withOpacity(0.2),
-                                            width: 0.0),
+                                      decoration: InputDecoration(
+                                        focusedErrorBorder:
+                                            const OutlineInputBorder(
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(8.0)),
+                                          borderSide: BorderSide(
+                                              color: Color.fromARGB(
+                                                  255, 252, 69, 69),
+                                              width: 1.0),
+                                        ),
+                                        errorBorder: const OutlineInputBorder(
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(8.0)),
+                                          borderSide: BorderSide(
+                                              color: Color.fromARGB(
+                                                  255, 252, 69, 69),
+                                              width: 1.0),
+                                        ),
+                                        enabledBorder: OutlineInputBorder(
+                                          borderRadius: const BorderRadius.all(
+                                              Radius.circular(8.0)),
+                                          borderSide: BorderSide(
+                                              color: const Color.fromARGB(
+                                                      0, 102, 102, 102)
+                                                  .withOpacity(0.2),
+                                              width: 0.0),
+                                        ),
+                                        focusedBorder: OutlineInputBorder(
+                                          borderRadius: const BorderRadius.all(
+                                              Radius.circular(8.0)),
+                                          borderSide: BorderSide(
+                                              color:
+                                                  Colors.white.withOpacity(0.2),
+                                              width: 0.0),
+                                        ),
+                                        fillColor: const Color(0xff128C7E),
+                                        filled: true,
                                       ),
-                                      focusedBorder: OutlineInputBorder(
-                                        borderRadius: const BorderRadius.all(
-                                            Radius.circular(8.0)),
-                                        borderSide: BorderSide(
-                                            color:
-                                                Colors.white.withOpacity(0.2),
-                                            width: 0.0),
-                                      ),
-                                      fillColor: const Color(0xff128C7E),
-                                      filled: true,
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(top: 4.h),
-                              child: MaterialButton(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(8.0)),
-                                onPressed: () {
-                                  c.registerPageFlow.value += 1;
-                                },
-                                height: 8.h,
-                                color: const Color(0xff128C7E),
-                                child: Text(
-                                  'Next',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontFamily: 'Quicksand-SemiBold',
-                                      fontSize: 12.sp),
+                                    )
+                                  ],
                                 ),
                               ),
-                            ),
-                          ],
+                              Container(
+                                margin: EdgeInsets.only(top: 4.h),
+                                alignment: Alignment.centerLeft,
+                                // color: Colors.blue,
+                                width: 70.w,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      margin: EdgeInsets.only(bottom: 0.5.h),
+                                      child: Text(
+                                        'Email Address',
+                                        style: TextStyle(
+                                            fontSize: 16.sp,
+                                            color: const Color(0xff128C7E),
+                                            fontFamily: 'Quicksand-SemiBold'),
+                                      ),
+                                    ),
+                                    TextFormField(
+                                      controller: emailController,
+                                      enableSuggestions: true,
+                                      cursorWidth: 1.8,
+                                      cursorColor: const Color(0xffFFFCCA),
+                                      validator: (value) {
+                                        if (value == null || value.isEmpty) {
+                                          return '* Missing Field';
+                                        } else if (!isEmail(
+                                            emailController.text)) {
+                                          return "* Enter a valid email";
+                                        }
+                                        return null;
+                                      },
+                                      style: const TextStyle(
+                                          color: Color(0xffFFFCCA),
+                                          fontFamily: 'Quicksand-SemiBold'),
+                                      decoration: InputDecoration(
+                                        focusedErrorBorder:
+                                            const OutlineInputBorder(
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(8.0)),
+                                          borderSide: BorderSide(
+                                              color: Color.fromARGB(
+                                                  255, 252, 69, 69),
+                                              width: 1.0),
+                                        ),
+                                        errorBorder: const OutlineInputBorder(
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(8.0)),
+                                          borderSide: BorderSide(
+                                              color: Color.fromARGB(
+                                                  255, 252, 69, 69),
+                                              width: 1.0),
+                                        ),
+                                        enabledBorder: OutlineInputBorder(
+                                          borderRadius: const BorderRadius.all(
+                                              Radius.circular(8.0)),
+                                          borderSide: BorderSide(
+                                              color: const Color.fromARGB(
+                                                      0, 102, 102, 102)
+                                                  .withOpacity(0.2),
+                                              width: 0.0),
+                                        ),
+                                        focusedBorder: OutlineInputBorder(
+                                          borderRadius: const BorderRadius.all(
+                                              Radius.circular(8.0)),
+                                          borderSide: BorderSide(
+                                              color:
+                                                  Colors.white.withOpacity(0.2),
+                                              width: 0.0),
+                                        ),
+                                        fillColor: const Color(0xff128C7E),
+                                        filled: true,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 4.h),
+                                child: MaterialButton(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(8.0)),
+                                  onPressed: () async {
+                                    if (_formKey.currentState!.validate()) {
+                                      // If the form is valid, display a snackbar. In the real world,
+                                      // you'd often call a server or save the information in a database.
+                                      ScaffoldMessenger.of(context)
+                                          .showSnackBar(
+                                        const SnackBar(
+                                            content: Text('Processing Data')),
+                                      );
+                                    }
+
+                                    // FirestoreDB f = FirestoreDB();
+                                    // bool doesExist = await f
+                                    //     .doesDocumentExist(emailController.text);
+
+                                    // if (!doesExist) {
+                                    //   c.registerPageFlow.value += 1;
+                                    // } else {
+                                    //   String? loginType = await f
+                                    //       .getLoginType(emailController.text);
+
+                                    //   // ignore: use_build_context_synchronously
+                                    //   ScaffoldMessenger.of(context)
+                                    //       .showSnackBar(SnackBar(
+                                    //     content: Text(
+                                    //         "Email Already Registered via  $loginType Sign In"),
+                                    //   ));
+                                    // }
+                                  },
+                                  height: 8.h,
+                                  color: const Color(0xff128C7E),
+                                  child: Text(
+                                    'Next',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Quicksand-SemiBold',
+                                        fontSize: 12.sp),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         )
                       : Column(
                           mainAxisAlignment: MainAxisAlignment.center,

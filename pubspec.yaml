@@ -23,6 +23,7 @@ dependencies:
   firebase_messaging: ^14.6.9
   cloud_firestore: ^4.9.3
   google_sign_in: ^6.1.5
+  string_validator: ^1.0.0
 
 dev_dependencies:
   flutter_test:
