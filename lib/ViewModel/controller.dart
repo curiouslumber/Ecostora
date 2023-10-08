@@ -2,10 +2,13 @@ import 'dart:io';
 import 'package:get/get.dart';
 
 class Controller extends GetxController {
+  // Account Flow variables
   var isAccount = false.obs;
   var registerPageFlow = 0.obs;
   var signedIn = false.obs;
   var isLoading = false.obs;
+  var isVisible = false.obs;
+  var isVisible1 = false.obs;
 
   // HomePage variables
   var fragmentIndex = 0.obs;

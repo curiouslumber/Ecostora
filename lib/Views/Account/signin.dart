@@ -18,6 +18,11 @@ class SignIn extends StatelessWidget {
     TextEditingController emailController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
 
+    if (c.isVisible.value || c.isVisible1.value) {
+      c.isVisible.value = false;
+      c.isVisible1.value = false;
+    }
+
     return Obx(
       () => Scaffold(
         appBar: c.isLoading.value
@@ -68,6 +73,12 @@ class SignIn extends StatelessWidget {
                             ),
                             TextFormField(
                               controller: emailController,
+                              enableSuggestions: true,
+                              cursorWidth: 1.8,
+                              cursorColor: const Color(0xffFFFCCA),
+                              style: const TextStyle(
+                                  color: Color(0xffFFFCCA),
+                                  fontFamily: 'Quicksand-SemiBold'),
                               decoration: InputDecoration(
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius: const BorderRadius.all(
@@ -110,7 +121,28 @@ class SignIn extends StatelessWidget {
                             ),
                             TextFormField(
                               controller: passwordController,
+                              obscureText: c.isVisible.value ? false : true,
+                              cursorWidth: 1.8,
+                              enableSuggestions: true,
+                              cursorColor: const Color(0xffFFFCCA),
+                              style: const TextStyle(
+                                  color: Color(0xffFFFCCA),
+                                  fontFamily: 'Quicksand-SemiBold'),
                               decoration: InputDecoration(
+                                suffixIcon: IconButton(
+                                  padding: EdgeInsets.zero,
+                                  onPressed: () {
+                                    c.isVisible.value
+                                        ? c.isVisible.value = false
+                                        : c.isVisible.value = true;
+                                  },
+                                  icon: Icon(
+                                    c.isVisible.value
+                                        ? Icons.visibility
+                                        : Icons.visibility_off,
+                                    color: const Color(0xffFFFCCA),
+                                  ),
+                                ),
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius: const BorderRadius.all(
                                       Radius.circular(8.0)),

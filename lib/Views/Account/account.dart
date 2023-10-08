@@ -62,24 +62,27 @@ class Account extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
-                          height: 15.h,
-                          alignment: Alignment.center,
-                          decoration: const BoxDecoration(
-                              color: Colors.white, shape: BoxShape.circle),
-                          child: c.photoUrl.value != "null"
-                              ? ClipOval(
-                                  child: Image.network(c.photoUrl.value),
-                                )
-                              : IconButton(
-                                  padding: EdgeInsets.zero,
-                                  onPressed: () {},
-                                  icon: const Icon(
-                                    Icons.upload,
-                                    size: 40,
-                                    color: Color(0xff128C7E),
-                                  ),
-                                ),
-                        ),
+                            height: 15.h,
+                            alignment: Alignment.center,
+                            decoration: const BoxDecoration(
+                                color: Colors.white, shape: BoxShape.circle),
+                            child: c.photoUrl.value != "null" &&
+                                    c.isAccount.value == true
+                                ? ClipOval(
+                                    child: Image.network(c.photoUrl.value),
+                                  )
+                                : (c.photoUrl.value == "null" &&
+                                        c.isAccount.value == true
+                                    ? IconButton(
+                                        padding: EdgeInsets.zero,
+                                        onPressed: () {},
+                                        icon: const Icon(
+                                          Icons.upload,
+                                          size: 40,
+                                          color: Color(0xff128C7E),
+                                        ),
+                                      )
+                                    : Container())),
                         Obx(
                           () => Container(
                             margin: c.isAccount.value
