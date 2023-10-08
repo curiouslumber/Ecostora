@@ -22,8 +22,13 @@ dependencies:
   firebase_auth: ^4.10.1
   firebase_messaging: ^14.6.9
   cloud_firestore: ^4.9.3
+  firebase_storage: ^11.2.8
   google_sign_in: ^6.1.5
   string_validator: ^1.0.0
+  image_cropper: ^5.0.0
+  image_picker: ^1.0.4
+  path_provider: ^2.1.1
+  flutter_image_compress: ^2.0.4
 
 dev_dependencies:
   flutter_test:
