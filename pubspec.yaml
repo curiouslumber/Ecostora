@@ -41,20 +41,15 @@ flutter:
   uses-material-design: true
 
   assets:
-    - images/men1.jpg
-    - images/men2.jpg
-    - images/tech1.jpg
-    - images/tech2.jpg
-    - images/women1.jpg
-    - images/mobile1.jpg
-    - images/headset1.jpg
-    - images/mensclothing1.jpg
-    - images/womensclothing1.jpg
-    - images/mobile2.jpg
-    - images/luxurybag1.jpg
-    - images/jacket1.jpg
-    - images/laptopsale1.jpg
     - images/pages/screen1.png
+    - images/Home/carousel1.jpg
+    - images/Home/carousel2.jpg
+    - images/Home/carousel3.jpg
+    - images/Home/organicfruits1.jpg
+    - images/Home/plantbasedprotein1.jpg
+    - images/Home/pantry1.jpg
+    - images/Home/ecofriendlysnacks1.jpg
+    - images/Home/ecofriendlysnacks2.jpg
 
   fonts:
     - family: Quicksand-Regular

@@ -32,18 +32,18 @@ class HomePage extends StatelessWidget {
     });
 
     return Container(
-      color: const Color(0xff128C7E),
+      color: const Color(0xff157F1F),
       child: SafeArea(
         child: Obx(
           () => Scaffold(
             appBar: AppBar(
-              foregroundColor: const Color(0xffFFFCCA),
+              foregroundColor: const Color(0xffF4D6CC),
               shadowColor: const Color.fromARGB(0, 18, 140, 126),
               elevation: 16.0,
-              backgroundColor: const Color(0xff128C7E),
+              backgroundColor: const Color(0xff157F1F),
               title: const Text(
                 'Ecostora',
-                style: TextStyle(fontFamily: 'Quicksand-SemiBold'),
+                style: TextStyle(fontFamily: 'Quicksand-Medium'),
               ),
               actions: [
                 Container(
@@ -62,7 +62,7 @@ class HomePage extends StatelessWidget {
               elevation: 16.0,
               type: BottomNavigationBarType.fixed,
               iconSize: 24.0,
-              backgroundColor: const Color(0xff128C7E),
+              backgroundColor: const Color(0xff157F1F),
               items: const [
                 BottomNavigationBarItem(
                     icon: Icon(
@@ -87,10 +87,10 @@ class HomePage extends StatelessWidget {
               ],
               unselectedItemColor: Colors.white,
               unselectedLabelStyle: const TextStyle(
-                  color: Colors.white, fontFamily: 'Quicksand-Medium'),
+                  color: Colors.white, fontFamily: 'Quicksand-Regular'),
               selectedLabelStyle: const TextStyle(
-                  color: Color(0xffFFFCCA), fontFamily: 'Quicksand-SemiBold'),
-              selectedItemColor: const Color(0xffFFFCCA),
+                  color: Color(0xffF4D6CC), fontFamily: 'Quicksand-Medium'),
+              selectedItemColor: const Color(0xffF4D6CC),
             ),
           ),
         ),
