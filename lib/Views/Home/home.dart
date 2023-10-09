@@ -91,7 +91,7 @@ class Home extends StatelessWidget {
                             materialTapTargetSize:
                                 MaterialTapTargetSize.shrinkWrap,
                             padding: const EdgeInsets.all(0),
-                            height: 5.h,
+                            height: screenHeight / 20,
                             onPressed: () {},
                             child: Container(
                               decoration: const BoxDecoration(
@@ -130,7 +130,7 @@ class Home extends StatelessWidget {
                           Container(
                             padding: const EdgeInsets.symmetric(
                                 vertical: 8.0, horizontal: 16.0),
-                            height: 10.h,
+                            height: screenHeight / 10,
                             width: screenWidth,
                             child: SearchBar(
                                 trailing: [
@@ -160,7 +160,7 @@ class Home extends StatelessWidget {
                           Container(
                             margin: const EdgeInsets.only(top: 4.0),
                             // color: Colors.black,
-                            height: 15.h,
+                            height: screenHeight / 6.5,
                             width: screenWidth,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -281,7 +281,7 @@ class Home extends StatelessWidget {
                               alignment: Alignment.bottomCenter,
                               children: [
                                 SizedBox(
-                                  height: 30.h,
+                                  height: screenHeight / 3.2,
                                   width: screenWidth,
                                   child: CarouselSlider(
                                     options: CarouselOptions(
@@ -294,12 +294,10 @@ class Home extends StatelessWidget {
                                     items: [
                                       Container(
                                         alignment: Alignment.center,
-                                        child: ClipRRect(
-                                          child: Image.asset(
-                                              'images/Home/carousel1.jpg',
-                                              width: screenWidth,
-                                              fit: BoxFit.fitWidth),
-                                        ),
+                                        child: Image.asset(
+                                            'images/Home/carousel1.jpg',
+                                            width: screenWidth,
+                                            fit: BoxFit.fill),
                                       ),
                                       Container(
                                         alignment: Alignment.center,
@@ -308,7 +306,7 @@ class Home extends StatelessWidget {
                                           child: Image.asset(
                                               'images/Home/carousel2.jpg',
                                               width: screenWidth,
-                                              fit: BoxFit.fitWidth),
+                                              fit: BoxFit.fill),
                                         ),
                                       ),
                                       Container(
@@ -319,7 +317,7 @@ class Home extends StatelessWidget {
                                           child: Image.asset(
                                               'images/Home/carousel3.jpg',
                                               width: screenWidth,
-                                              fit: BoxFit.fitWidth),
+                                              fit: BoxFit.fill),
                                         ),
                                       ),
                                     ],
@@ -378,7 +376,7 @@ class Home extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            height: 38.h,
+                            height: screenHeight / 2.75,
                             width: screenWidth,
                             // color: Colors.green,
                             padding: EdgeInsets.symmetric(vertical: 1.3.h),
