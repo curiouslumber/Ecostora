@@ -12,8 +12,6 @@ Ecostora is a revolutionary ecommerce platform dedicated to connecting conscious
 - Transparent Sourcing: Learn about the origins and practices of our products, ensuring you make informed and conscious choices.
 - Personalized Recommendations: Receive tailored product suggestions based on your preferences and browsing history.
 
-## Preview:
-<img src="https://github.com/curiouslumber/Ecostora/blob/main/images/pages/screen1.png" width="200" hspace="30">
 
 ## Technologies Used:
 - Flutter & Dart
