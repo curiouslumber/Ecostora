@@ -37,10 +37,10 @@ class HomePage extends StatelessWidget {
         child: Obx(
           () => Scaffold(
             appBar: AppBar(
-              foregroundColor: const Color(0xffF4D6CC),
+              foregroundColor: const Color(0xffFFFDDB),
               shadowColor: const Color.fromARGB(0, 18, 140, 126),
               elevation: 16.0,
-              backgroundColor: const Color(0xff157F1F),
+              backgroundColor: const Color(0xff028a0f),
               title: const Text(
                 'Ecostora',
                 style: TextStyle(fontFamily: 'Quicksand-Medium'),
@@ -62,7 +62,7 @@ class HomePage extends StatelessWidget {
               elevation: 16.0,
               type: BottomNavigationBarType.fixed,
               iconSize: 24.0,
-              backgroundColor: const Color(0xff157F1F),
+              backgroundColor: const Color(0xff028a0f),
               items: const [
                 BottomNavigationBarItem(
                     icon: Icon(
@@ -89,8 +89,8 @@ class HomePage extends StatelessWidget {
               unselectedLabelStyle: const TextStyle(
                   color: Colors.white, fontFamily: 'Quicksand-Regular'),
               selectedLabelStyle: const TextStyle(
-                  color: Color(0xffF4D6CC), fontFamily: 'Quicksand-Medium'),
-              selectedItemColor: const Color(0xffF4D6CC),
+                  color: Color(0xffFFFDDB), fontFamily: 'Quicksand-Medium'),
+              selectedItemColor: const Color(0xffFFFDDB),
             ),
           ),
         ),

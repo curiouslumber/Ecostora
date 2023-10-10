@@ -16,6 +16,7 @@ dependencies:
   get: ^4.6.6
   carousel_slider: ^4.2.1
   sizer: ^2.0.15
+  auto_size_text: ^3.0.0
   ionicons: ^0.2.2
   font_awesome_flutter: ^10.5.0
   firebase_core: ^2.17.0
@@ -50,6 +51,7 @@ flutter:
     - images/Home/pantry1.jpg
     - images/Home/ecofriendlysnacks1.jpg
     - images/Home/ecofriendlysnacks2.jpg
+    - images/Home/wheat1.jpg
 
   fonts:
     - family: Quicksand-Regular

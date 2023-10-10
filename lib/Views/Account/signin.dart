@@ -34,12 +34,12 @@ class SignInState extends State<SignIn> {
       () => Scaffold(
         appBar: c.isLoading.value
             ? AppBar(
-                backgroundColor: const Color(0xff128C7E),
+                backgroundColor: const Color(0xff028a0f),
                 foregroundColor: const Color(0xffFFFCCA),
                 leading: Container(),
               )
             : AppBar(
-                backgroundColor: const Color(0xff128C7E),
+                backgroundColor: const Color(0xff028a0f),
                 foregroundColor: const Color(0xffFFFCCA),
               ),
         body: Container(
@@ -60,7 +60,7 @@ class SignInState extends State<SignIn> {
                         Text(
                           'Sign In',
                           style: TextStyle(
-                              color: const Color(0xff128C7E),
+                              color: const Color(0xff028a0f),
                               fontSize: 24.sp,
                               fontFamily: 'Quicksand-SemiBold'),
                         ),
@@ -77,7 +77,7 @@ class SignInState extends State<SignIn> {
                                 'Email address',
                                 style: TextStyle(
                                     fontSize: 16.sp,
-                                    color: const Color(0xff128C7E),
+                                    color: const Color(0xff028a0f),
                                     fontFamily: 'Quicksand-SemiBold'),
                               ),
                               TextFormField(
@@ -130,7 +130,7 @@ class SignInState extends State<SignIn> {
                                         color: Colors.white.withOpacity(0.2),
                                         width: 0.0),
                                   ),
-                                  fillColor: const Color(0xff128C7E),
+                                  fillColor: const Color(0xff028a0f),
                                   filled: true,
                                 ),
                               )
@@ -150,7 +150,7 @@ class SignInState extends State<SignIn> {
                                 'Password',
                                 style: TextStyle(
                                     fontSize: 16.sp,
-                                    color: const Color(0xff128C7E),
+                                    color: const Color(0xff028a0f),
                                     fontFamily: 'Quicksand-SemiBold'),
                               ),
                               TextFormField(
@@ -223,7 +223,7 @@ class SignInState extends State<SignIn> {
                                         color: Colors.white.withOpacity(0.2),
                                         width: 0.0),
                                   ),
-                                  fillColor: const Color(0xff128C7E),
+                                  fillColor: const Color(0xff028a0f),
                                   filled: true,
                                 ),
                               ),
@@ -243,7 +243,7 @@ class SignInState extends State<SignIn> {
                                       style: TextStyle(
                                         fontFamily: 'Quicksand-SemiBold',
                                         fontSize: 11.sp,
-                                        color: const Color(0xff128C7E),
+                                        color: const Color(0xff028a0f),
                                       ),
                                     )),
                               ),
@@ -337,7 +337,7 @@ class SignInState extends State<SignIn> {
                               }
                             },
                             height: 8.h,
-                            color: const Color(0xff128C7E),
+                            color: const Color(0xff028a0f),
                             child: Text(
                               'Submit',
                               style: TextStyle(
@@ -365,7 +365,7 @@ class SignInState extends State<SignIn> {
                             Text(
                               'OR',
                               style: TextStyle(
-                                  color: const Color(0xff128C7E),
+                                  color: const Color(0xff028a0f),
                                   fontSize: 12.sp,
                                   fontFamily: 'Quicksand-Bold'),
                             ),
@@ -435,7 +435,7 @@ class SignInState extends State<SignIn> {
                               }
                             },
                             height: 8.h,
-                            color: const Color(0xff128C7E),
+                            color: const Color(0xff028a0f),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,

@@ -46,7 +46,7 @@ class Account extends StatelessWidget {
         child: c.isLoading.value
             ? const CircularProgressIndicator(
                 backgroundColor: Color(0xffFFFCCA),
-                color: Color(0xff128C7E),
+                color: Color(0xff028a0f),
               )
             : Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -56,7 +56,7 @@ class Account extends StatelessWidget {
                     alignment: Alignment.center,
                     height: 25.h,
                     width: 100.w,
-                    color: const Color(0xff128C7E),
+                    color: const Color(0xff028a0f),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -79,7 +79,7 @@ class Account extends StatelessWidget {
                                         icon: const Icon(
                                           Icons.upload,
                                           size: 40,
-                                          color: Color(0xff128C7E),
+                                          color: Color(0xff028a0f),
                                         ),
                                       )
                                     : Container())),
@@ -138,7 +138,7 @@ class Account extends StatelessWidget {
                                     children: [
                                       const Icon(
                                         Icons.my_library_books,
-                                        color: Color(0xff128C7E),
+                                        color: Color(0xff028a0f),
                                         size: 30,
                                       ),
                                       Container(
@@ -147,7 +147,7 @@ class Account extends StatelessWidget {
                                           'My Orders',
                                           style: TextStyle(
                                               fontFamily: 'Quicksand-SemiBold',
-                                              color: const Color(0xff128C7E),
+                                              color: const Color(0xff028a0f),
                                               fontSize: 16.sp),
                                         ),
                                       ),
@@ -169,7 +169,7 @@ class Account extends StatelessWidget {
                                       children: [
                                         const Icon(
                                           Icons.add_location_alt_rounded,
-                                          color: Color(0xff128C7E),
+                                          color: Color(0xff028a0f),
                                           size: 30,
                                         ),
                                         Container(
@@ -179,7 +179,7 @@ class Account extends StatelessWidget {
                                             style: TextStyle(
                                                 fontFamily:
                                                     'Quicksand-SemiBold',
-                                                color: const Color(0xff128C7E),
+                                                color: const Color(0xff028a0f),
                                                 fontSize: 16.sp),
                                           ),
                                         )
@@ -200,7 +200,7 @@ class Account extends StatelessWidget {
                                       children: [
                                         const Icon(
                                           Icons.notifications,
-                                          color: Color(0xff128C7E),
+                                          color: Color(0xff028a0f),
                                           size: 30,
                                         ),
                                         Container(
@@ -210,7 +210,7 @@ class Account extends StatelessWidget {
                                             style: TextStyle(
                                                 fontFamily:
                                                     'Quicksand-SemiBold',
-                                                color: const Color(0xff128C7E),
+                                                color: const Color(0xff028a0f),
                                                 fontSize: 16.sp),
                                           ),
                                         )
@@ -230,7 +230,7 @@ class Account extends StatelessWidget {
                                     children: [
                                       const Icon(
                                         Icons.manage_accounts_rounded,
-                                        color: Color(0xff128C7E),
+                                        color: Color(0xff028a0f),
                                         size: 30,
                                       ),
                                       Container(
@@ -239,7 +239,7 @@ class Account extends StatelessWidget {
                                           'Profile',
                                           style: TextStyle(
                                               fontFamily: 'Quicksand-SemiBold',
-                                              color: const Color(0xff128C7E),
+                                              color: const Color(0xff028a0f),
                                               fontSize: 16.sp),
                                         ),
                                       ),
@@ -260,7 +260,7 @@ class Account extends StatelessWidget {
                                     children: [
                                       const Icon(
                                         Icons.settings,
-                                        color: Color(0xff128C7E),
+                                        color: Color(0xff028a0f),
                                         size: 30,
                                       ),
                                       Container(
@@ -269,7 +269,7 @@ class Account extends StatelessWidget {
                                           'Settings',
                                           style: TextStyle(
                                               fontFamily: 'Quicksand-SemiBold',
-                                              color: const Color(0xff128C7E),
+                                              color: const Color(0xff028a0f),
                                               fontSize: 16.sp),
                                         ),
                                       ),
@@ -307,7 +307,7 @@ class Account extends StatelessWidget {
                                       children: [
                                         const Icon(
                                           Icons.logout_outlined,
-                                          color: Color(0xff128C7E),
+                                          color: Color(0xff028a0f),
                                           size: 30,
                                         ),
                                         Container(
@@ -317,7 +317,7 @@ class Account extends StatelessWidget {
                                             style: TextStyle(
                                                 fontFamily:
                                                     'Quicksand-SemiBold',
-                                                color: const Color(0xff128C7E),
+                                                color: const Color(0xff028a0f),
                                                 fontSize: 16.sp),
                                           ),
                                         ),
@@ -351,7 +351,7 @@ class Account extends StatelessWidget {
                                       children: [
                                         const Icon(
                                           Icons.login,
-                                          color: Color(0xff128C7E),
+                                          color: Color(0xff028a0f),
                                           size: 30,
                                         ),
                                         Container(
@@ -361,7 +361,7 @@ class Account extends StatelessWidget {
                                             style: TextStyle(
                                                 fontFamily:
                                                     'Quicksand-SemiBold',
-                                                color: const Color(0xff128C7E),
+                                                color: const Color(0xff028a0f),
                                                 fontSize: 16.sp),
                                           ),
                                         ),
@@ -394,7 +394,7 @@ class Account extends StatelessWidget {
                                       children: [
                                         const Icon(
                                           Icons.add_circle_outlined,
-                                          color: Color(0xff128C7E),
+                                          color: Color(0xff028a0f),
                                           size: 30,
                                         ),
                                         Container(
@@ -404,7 +404,7 @@ class Account extends StatelessWidget {
                                             style: TextStyle(
                                                 fontFamily:
                                                     'Quicksand-SemiBold',
-                                                color: const Color(0xff128C7E),
+                                                color: const Color(0xff028a0f),
                                                 fontSize: 16.sp),
                                           ),
                                         ),
@@ -432,7 +432,7 @@ class Account extends StatelessWidget {
                                       children: [
                                         const Icon(
                                           Icons.settings,
-                                          color: Color(0xff128C7E),
+                                          color: Color(0xff028a0f),
                                           size: 30,
                                         ),
                                         Container(
@@ -442,7 +442,7 @@ class Account extends StatelessWidget {
                                             style: TextStyle(
                                                 fontFamily:
                                                     'Quicksand-SemiBold',
-                                                color: const Color(0xff128C7E),
+                                                color: const Color(0xff028a0f),
                                                 fontSize: 16.sp),
                                           ),
                                         ),
