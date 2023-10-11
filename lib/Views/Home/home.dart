@@ -174,41 +174,50 @@ class Home extends StatelessWidget {
                                   height: 13.h,
                                   width: screenWidth / 6,
                                   alignment: Alignment.center,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        height: 8.h,
-                                        decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            border: Border.all(
-                                                width: 1.0,
-                                                color:
-                                                    const Color(0xff028a0f))),
-                                        child: ClipOval(
-                                          child: Image.asset(
-                                            'images/Home/organicfruits1.jpg',
+                                  child: MaterialButton(
+                                    onPressed: () {
+                                      c.pageIndex.value = 4;
+                                    },
+                                    padding: EdgeInsets.zero,
+                                    materialTapTargetSize:
+                                        MaterialTapTargetSize.shrinkWrap,
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          height: 8.h,
+                                          decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                              border: Border.all(
+                                                  width: 1.0,
+                                                  color:
+                                                      const Color(0xff028a0f))),
+                                          child: ClipOval(
+                                            child: Image.asset(
+                                              'images/Home/organicfruits1.jpg',
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                      Container(
-                                        height: 4.h,
-                                        margin: EdgeInsets.only(top: 1.h),
-                                        child: AutoSizeText(
-                                          'Organic\nFruits',
-                                          textAlign: TextAlign.center,
-                                          group: group,
-                                          maxLines: 2,
-                                          minFontSize: 8.0,
-                                          style: const TextStyle(
-                                            fontFamily: 'Quicksand-Bold',
-                                            color: Color(0xff028a0f),
+                                        Container(
+                                          height: 4.h,
+                                          margin: EdgeInsets.only(top: 1.h),
+                                          child: AutoSizeText(
+                                            'Organic\nFruits',
+                                            textAlign: TextAlign.center,
+                                            group: group,
+                                            maxLines: 2,
+                                            minFontSize: 8.0,
+                                            style: const TextStyle(
+                                              fontFamily: 'Quicksand-Bold',
+                                              color: Color(0xff028a0f),
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ),
                                 Container(

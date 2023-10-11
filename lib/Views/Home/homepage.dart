@@ -1,6 +1,7 @@
 import 'package:ecostore/ViewModel/controller.dart';
 import 'package:ecostore/Views/Account/account.dart';
 import 'package:ecostore/Views/Cart/cart.dart';
+import 'package:ecostore/Views/Categories/organicfruits.dart';
 import 'package:ecostore/Views/Favourites/favourites.dart';
 import 'package:ecostore/Views/Home/home.dart';
 import 'package:ecostore/Views/Home/sidebar.dart';
@@ -11,7 +12,13 @@ import 'package:get/get.dart';
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
-  final pages = [Home(), const Favourite(), const Cart(), Account()];
+  final pages = [
+    Home(),
+    const Favourite(),
+    const Cart(),
+    Account(),
+    OrganicFruits()
+  ];
   final c = Get.put(Controller());
 
   @override
@@ -53,11 +60,12 @@ class HomePage extends StatelessWidget {
               centerTitle: true,
             ),
             drawer: const Sidebar(),
-            body: pages[c.fragmentIndex.value],
+            body: pages[c.pageIndex.value],
             bottomNavigationBar: BottomNavigationBar(
               currentIndex: c.fragmentIndex.value,
               onTap: (value) {
                 c.fragmentIndex.value = value;
+                c.pageIndex.value = value;
               },
               elevation: 16.0,
               type: BottomNavigationBarType.fixed,

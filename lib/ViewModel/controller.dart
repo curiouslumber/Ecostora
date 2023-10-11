@@ -21,6 +21,8 @@ class Controller extends GetxController {
   var name = "".obs;
   var photoUrl = "null".obs;
 
+  var pageIndex = 0.obs;
+
   Future checkUserConnection() async {
     try {
       final result = await InternetAddress.lookup('google.com');
