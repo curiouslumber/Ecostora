@@ -52,6 +52,9 @@ flutter:
     - images/Home/ecofriendlysnacks1.jpg
     - images/Home/ecofriendlysnacks2.jpg
     - images/Home/wheat1.jpg
+    - images/Categories/apples.jpg
+    - images/Categories/spinach.jpg
+    - images/Categories/avacados.jpg
 
   fonts:
     - family: Quicksand-Regular

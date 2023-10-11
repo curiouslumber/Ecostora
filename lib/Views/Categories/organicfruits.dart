@@ -46,9 +46,6 @@ class OrganicFruits extends StatelessWidget {
               ),
             ),
             Container(
-              height: 1.h,
-            ),
-            Container(
               width: 90.w,
               height: 22.h,
               decoration: BoxDecoration(
@@ -146,13 +143,23 @@ class OrganicFruits extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(6.0)),
+                                decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.white),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(6.0)),
                                   color: Colors.white,
                                 ),
                                 width: 28.0000.w,
                                 height: 15.0000.h,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(6.0),
+                                  child: Image.asset(
+                                    'images/Categories/apples.jpg',
+                                    width: 28.0000.w,
+                                    height: 15.0000.h,
+                                    fit: BoxFit.fill,
+                                  ),
+                                ),
                               ),
                               const Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
@@ -291,13 +298,23 @@ class OrganicFruits extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(6.0)),
+                                decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.white),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(6.0)),
                                   color: Colors.white,
                                 ),
                                 width: 28.0000.w,
                                 height: 15.0000.h,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(6.0),
+                                  child: Image.asset(
+                                    'images/Categories/spinach.jpg',
+                                    width: 28.0000.w,
+                                    height: 15.0000.h,
+                                    fit: BoxFit.fill,
+                                  ),
+                                ),
                               ),
                               const Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
@@ -436,13 +453,23 @@ class OrganicFruits extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
-                                decoration: const BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(6.0)),
+                                decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.white),
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(6.0)),
                                   color: Colors.white,
                                 ),
                                 width: 28.0000.w,
                                 height: 15.0000.h,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(6.0),
+                                  child: Image.asset(
+                                    'images/Categories/avacados.jpg',
+                                    width: 28.0000.w,
+                                    height: 15.0000.h,
+                                    fit: BoxFit.fill,
+                                  ),
+                                ),
                               ),
                               const Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
