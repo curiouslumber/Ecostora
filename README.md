@@ -6,7 +6,7 @@
 Ecostora is a revolutionary ecommerce platform dedicated to connecting conscious consumers with a curated selection of eco-friendly food products. We're committed to promoting sustainable living by offering a wide range of responsibly sourced, organic, and environmentally-friendly food items. With Ecostora, you can shop confidently, knowing that every purchase contributes to a healthier planet.
 
 ## Preview:
-<img src="https://github.com/curiouslumber/Ecostora/blob/main/images/pages/screen1.1.jpg" width="280">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/curiouslumber/Ecostora/blob/main/images/pages/screen2.jpg" width="280">
+<img src="https://github.com/curiouslumber/Ecostora/blob/main/images/pages/screen1.1.jpg" width="280">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/curiouslumber/Ecostora/blob/main/images/pages/screen2.1.jpg" width="280">
 
 ## Key Features:
 - Curated Selection: Discover a carefully curated range of eco-friendly food products, sourced from trusted producers and suppliers.
