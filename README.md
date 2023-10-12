@@ -22,3 +22,6 @@ Ecostora is a revolutionary ecommerce platform dedicated to connecting conscious
 - Firebase - Authentication, Firestore, Storage
 - Figma for UI Design
 - Leonardo AI for Image Generation
+
+ Features to be added:
+ - MongoDB
