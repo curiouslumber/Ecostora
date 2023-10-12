@@ -1,6 +1,8 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:ecostore/ViewModel/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ionicons/ionicons.dart';
 import 'package:sizer/sizer.dart';
 
 class OrganicFruits extends StatelessWidget {
@@ -45,622 +47,1057 @@ class OrganicFruits extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-              width: 90.w,
-              height: 20.5.h,
-              decoration: BoxDecoration(
-                  color: const Color(0xff028a0f),
-                  borderRadius: BorderRadius.circular(6.0)),
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.only(top: 1.5.h),
-                      width: 56.w,
-                      // color: Colors.white,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            decoration: const BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.only(
-                                    topRight: Radius.circular(6.0),
-                                    bottomRight: Radius.circular(6.0))),
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 8.0, vertical: 4.0),
-                            child: Text(
-                              'Organic Fruits',
-                              style: TextStyle(
-                                  fontFamily: 'Quicksand-Medium',
-                                  color: const Color.fromARGB(255, 1, 102, 11),
-                                  fontSize: 10.sp),
-                            ),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.only(left: 8.0, top: 3.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Apples',
-                                  style: TextStyle(
-                                      fontFamily: 'Quicksand-Medium',
-                                      fontSize: 14.sp,
-                                      color: Colors.white),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.only(top: 1.h),
-                                  child: Text(
-                                    'Fresh, crisp, and pesticide-free apples sourced from local organic farms.',
-                                    style: TextStyle(
-                                      fontFamily: 'Quicksand-Regular',
-                                      fontSize: 10.sp,
+            MaterialButton(
+              onPressed: () {
+                print("pressed");
+              },
+              padding: EdgeInsets.zero,
+              materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              child: Container(
+                width: 90.w,
+                height: 20.5.h,
+                decoration: BoxDecoration(
+                    color: const Color(0xff028a0f),
+                    borderRadius: BorderRadius.circular(6.0)),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        flex: 6,
+                        child: Container(
+                          padding: EdgeInsets.only(top: 1.5.h, right: 1.w),
+                          // color: Colors.white,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                flex: 1,
+                                child: Container(
+                                  decoration: const BoxDecoration(
                                       color: Colors.white,
-                                    ),
+                                      borderRadius: BorderRadius.only(
+                                          topRight: Radius.circular(6.0),
+                                          bottomRight: Radius.circular(6.0))),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 8.0, vertical: 4.0),
+                                  child: AutoSizeText(
+                                    'Organic Fruits',
+                                    style: TextStyle(
+                                        fontFamily: 'Quicksand-Medium',
+                                        color: const Color(0xff028a0f),
+                                        fontSize: 24.sp),
                                   ),
                                 ),
-                                Container(
-                                  margin: EdgeInsets.only(top: 2.2.h),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                              ),
+                              Expanded(
+                                flex: 4,
+                                child: Container(
+                                  // color: Colors.amber,
+                                  padding: EdgeInsets.only(
+                                      left: 2.w,
+                                      top: 0.2.h,
+                                      bottom: 0.2.h,
+                                      right: 1.w),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
-                                      Text(
-                                        '\$2.99 per lb',
-                                        style: TextStyle(
-                                          fontFamily: 'Quicksand-SemiBold',
-                                          fontSize: 12.sp,
-                                          color: Colors.white,
+                                      Expanded(
+                                        flex: 3,
+                                        child: Container(
+                                          // color: Colors.amber,
+                                          alignment: Alignment.topLeft,
+                                          child: AutoSizeText(
+                                            'Apples',
+                                            style: TextStyle(
+                                                fontFamily: 'Quicksand-Medium',
+                                                fontSize: 20.sp,
+                                                color: Colors.white),
+                                          ),
                                         ),
                                       ),
-                                      Text(
-                                        '120+ buys',
-                                        style: TextStyle(
-                                          fontFamily: 'Quicksand-Medium',
-                                          fontSize: 10.sp,
-                                          color: Colors.white,
+                                      Expanded(
+                                        flex: 7,
+                                        child: Container(
+                                          alignment: Alignment.topLeft,
+                                          // color: Colors.amber,
+                                          margin: EdgeInsets.only(top: 0.4.h),
+                                          child: AutoSizeText(
+                                            'Fresh, crisp, and pesticide-free apples sourced from local organic farms.',
+                                            style: TextStyle(
+                                              fontFamily: 'Quicksand-Regular',
+                                              fontSize: 11.sp,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 3,
+                                        child: Container(
+                                          alignment: Alignment.bottomLeft,
+                                          margin:
+                                              EdgeInsets.only(bottom: 0.6.h),
+                                          // color: Colors.green,
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              AutoSizeText(
+                                                '\$2.99 per lb',
+                                                style: TextStyle(
+                                                  fontFamily:
+                                                      'Quicksand-SemiBold',
+                                                  fontSize: 12.sp,
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                              Container(
+                                                margin:
+                                                    EdgeInsets.only(right: 1.w),
+                                                child: AutoSizeText(
+                                                  '120+ buys',
+                                                  style: TextStyle(
+                                                    fontFamily:
+                                                        'Quicksand-Medium',
+                                                    fontSize: 12.sp,
+                                                    color: Colors.white,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                       ),
                                     ],
                                   ),
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
-                        ],
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                      width: 30.w,
-                      child: Container(
-                        padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+                      Expanded(
+                        flex: 3,
                         child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.white),
-                                  borderRadius: const BorderRadius.all(
-                                      Radius.circular(6.0)),
-                                  color: Colors.white,
-                                ),
-                                width: 28.0000.w,
-                                height: 15.0000.h,
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(6.0),
-                                  child: Image.asset(
-                                    'images/Categories/apples.jpg',
-                                    width: 28.0000.w,
-                                    height: 15.0000.h,
-                                    fit: BoxFit.fill,
-                                  ),
+                              Expanded(
+                                flex: 14,
+                                child: Stack(
+                                  alignment: Alignment.topRight,
+                                  fit: StackFit.expand,
+                                  children: [
+                                    Container(
+                                      margin: EdgeInsets.only(
+                                          top: 1.0.h,
+                                          bottom: 0.5.h,
+                                          right: 1.5.w),
+                                      decoration: BoxDecoration(
+                                        border: Border.all(color: Colors.white),
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(6.0)),
+                                        color: Colors.white,
+                                      ),
+                                      child: ClipRRect(
+                                        borderRadius:
+                                            BorderRadius.circular(6.0),
+                                        child: Image.asset(
+                                          'images/Categories/apples.jpg',
+                                          fit: BoxFit.fill,
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      margin: EdgeInsets.only(
+                                          top: 1.5.h, right: 2.25.w),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.end,
+                                        children: [
+                                          GestureDetector(
+                                            onTap: () {
+                                              print("pressed 1");
+                                            },
+                                            child: Container(
+                                              alignment: Alignment.center,
+                                              decoration: const BoxDecoration(
+                                                  color: Colors.white,
+                                                  shape: BoxShape.circle),
+                                              width: 8.w,
+                                              height: 4.h,
+                                              child: Icon(
+                                                Icons.favorite_border_sharp,
+                                                color: const Color(0xff028a0f),
+                                                size: 4.5.w,
+                                              ),
+                                            ),
+                                          ),
+                                          GestureDetector(
+                                            onTap: () {
+                                              print('pressed 2');
+                                            },
+                                            child: Container(
+                                              margin:
+                                                  EdgeInsets.only(top: 0.5.h),
+                                              alignment: Alignment.center,
+                                              decoration: const BoxDecoration(
+                                                  color: Colors.white,
+                                                  shape: BoxShape.circle),
+                                              width: 8.w,
+                                              height: 4.h,
+                                              child: Icon(
+                                                Ionicons.cart_outline,
+                                                color: const Color(0xff028a0f),
+                                                size: 5.w,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    )
+                                  ],
                                 ),
                               ),
-                              const Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.white,
-                                    size: 20,
+                              Expanded(
+                                flex: 3,
+                                child: Container(
+                                  // color: Colors.amber,
+                                  margin: EdgeInsets.only(
+                                      bottom: 0.6.h, right: 1.5.w),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Icon(Icons.star,
+                                          color: Colors.white, size: 5.6.w),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.white,
+                                        size: 5.6.w,
+                                      ),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.white,
+                                        size: 5.6.w,
+                                      ),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.white,
+                                        size: 5.6.w,
+                                      ),
+                                      Icon(
+                                        Icons.star_outline,
+                                        color: Colors.white,
+                                        size: 5.6.w,
+                                      ),
+                                    ],
                                   ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.white,
-                                    size: 20,
-                                  ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.white,
-                                    size: 20,
-                                  ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.white,
-                                    size: 20,
-                                  ),
-                                  Icon(
-                                    Icons.star_outline,
-                                    color: Colors.white,
-                                    size: 20,
-                                  ),
-                                ],
+                                ),
                               )
                             ]),
-                      ),
-                    )
-                  ]),
+                      )
+                    ]),
+              ),
             ),
             Container(
               height: 3.h,
             ),
-            Container(
-              width: 90.w,
-              height: 20.5.h,
-              decoration: BoxDecoration(
-                  color: const Color(0xff028a0f),
-                  borderRadius: BorderRadius.circular(6.0)),
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.only(top: 1.5.h),
-                      width: 56.w,
-                      // color: Colors.white,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            decoration: const BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.only(
-                                    topRight: Radius.circular(6.0),
-                                    bottomRight: Radius.circular(6.0))),
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 8.0, vertical: 4.0),
-                            child: Text(
-                              'Organic Fruits',
-                              style: TextStyle(
-                                  fontFamily: 'Quicksand-Medium',
-                                  color: const Color.fromARGB(255, 1, 102, 11),
-                                  fontSize: 10.sp),
-                            ),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.only(left: 8.0, top: 3.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Spinach',
-                                  style: TextStyle(
-                                      fontFamily: 'Quicksand-Medium',
-                                      fontSize: 14.sp,
-                                      color: Colors.white),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.only(top: 1.h),
-                                  child: Text(
-                                    'Nutrient-rich organic spinach leaves, perfect for salads and smoothies.',
-                                    style: TextStyle(
-                                      fontFamily: 'Quicksand-Regular',
-                                      fontSize: 10.sp,
+            MaterialButton(
+              onPressed: () {
+                print("pressed");
+              },
+              padding: EdgeInsets.zero,
+              materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              child: Container(
+                width: 90.w,
+                height: 20.5.h,
+                decoration: BoxDecoration(
+                    color: const Color(0xff028a0f),
+                    borderRadius: BorderRadius.circular(6.0)),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        flex: 6,
+                        child: Container(
+                          padding: EdgeInsets.only(top: 1.5.h, right: 1.w),
+                          // color: Colors.white,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                flex: 1,
+                                child: Container(
+                                  decoration: const BoxDecoration(
                                       color: Colors.white,
-                                    ),
+                                      borderRadius: BorderRadius.only(
+                                          topRight: Radius.circular(6.0),
+                                          bottomRight: Radius.circular(6.0))),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 8.0, vertical: 4.0),
+                                  child: AutoSizeText(
+                                    'Organic Fruits',
+                                    style: TextStyle(
+                                        fontFamily: 'Quicksand-Medium',
+                                        color: const Color(0xff028a0f),
+                                        fontSize: 24.sp),
                                   ),
                                 ),
-                                Container(
-                                  margin: EdgeInsets.only(top: 2.2.h),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                              ),
+                              Expanded(
+                                flex: 4,
+                                child: Container(
+                                  // color: Colors.amber,
+                                  padding: EdgeInsets.only(
+                                      left: 2.w,
+                                      top: 0.2.h,
+                                      bottom: 0.2.h,
+                                      right: 1.w),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
-                                      Text(
-                                        '\$3.49 per bunch',
-                                        style: TextStyle(
-                                          fontFamily: 'Quicksand-SemiBold',
-                                          fontSize: 11.sp,
-                                          color: Colors.white,
+                                      Expanded(
+                                        flex: 3,
+                                        child: Container(
+                                          // color: Colors.amber,
+                                          alignment: Alignment.topLeft,
+                                          child: AutoSizeText(
+                                            'Spinach',
+                                            style: TextStyle(
+                                                fontFamily: 'Quicksand-Medium',
+                                                fontSize: 20.sp,
+                                                color: Colors.white),
+                                          ),
                                         ),
                                       ),
-                                      Text(
-                                        '20+ buys',
-                                        style: TextStyle(
-                                          fontFamily: 'Quicksand-Medium',
-                                          fontSize: 10.sp,
-                                          color: Colors.white,
+                                      Expanded(
+                                        flex: 7,
+                                        child: Container(
+                                          alignment: Alignment.topLeft,
+                                          // color: Colors.amber,
+                                          margin: EdgeInsets.only(top: 0.4.h),
+                                          child: AutoSizeText(
+                                            'Nutrient-rich organic spinach leaves, perfect for salads and smoothies.',
+                                            style: TextStyle(
+                                              fontFamily: 'Quicksand-Regular',
+                                              fontSize: 11.sp,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 3,
+                                        child: Container(
+                                          alignment: Alignment.bottomLeft,
+                                          margin:
+                                              EdgeInsets.only(bottom: 0.6.h),
+                                          // color: Colors.green,
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              AutoSizeText(
+                                                '\$3.49 per bunch',
+                                                style: TextStyle(
+                                                  fontFamily:
+                                                      'Quicksand-SemiBold',
+                                                  fontSize: 12.sp,
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                              Container(
+                                                margin:
+                                                    EdgeInsets.only(right: 1.w),
+                                                child: AutoSizeText(
+                                                  '100+ buys',
+                                                  style: TextStyle(
+                                                    fontFamily:
+                                                        'Quicksand-Medium',
+                                                    fontSize: 12.sp,
+                                                    color: Colors.white,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                       ),
                                     ],
                                   ),
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
-                        ],
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                      width: 30.w,
-                      child: Container(
-                        padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+                      Expanded(
+                        flex: 3,
                         child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.white),
-                                  borderRadius: const BorderRadius.all(
-                                      Radius.circular(6.0)),
-                                  color: Colors.white,
-                                ),
-                                width: 28.0000.w,
-                                height: 15.0000.h,
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(6.0),
-                                  child: Image.asset(
-                                    'images/Categories/spinach.jpg',
-                                    width: 28.0000.w,
-                                    height: 15.0000.h,
-                                    fit: BoxFit.fill,
-                                  ),
+                              Expanded(
+                                flex: 14,
+                                child: Stack(
+                                  alignment: Alignment.topRight,
+                                  fit: StackFit.expand,
+                                  children: [
+                                    Container(
+                                      margin: EdgeInsets.only(
+                                          top: 1.0.h,
+                                          bottom: 0.5.h,
+                                          right: 1.5.w),
+                                      decoration: BoxDecoration(
+                                        border: Border.all(color: Colors.white),
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(6.0)),
+                                        color: Colors.white,
+                                      ),
+                                      child: ClipRRect(
+                                        borderRadius:
+                                            BorderRadius.circular(6.0),
+                                        child: Image.asset(
+                                          'images/Categories/spinach.jpg',
+                                          fit: BoxFit.fill,
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      margin: EdgeInsets.only(
+                                          top: 1.5.h, right: 2.25.w),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.end,
+                                        children: [
+                                          GestureDetector(
+                                            onTap: () {
+                                              print("pressed 1");
+                                            },
+                                            child: Container(
+                                              alignment: Alignment.center,
+                                              decoration: const BoxDecoration(
+                                                  color: Colors.white,
+                                                  shape: BoxShape.circle),
+                                              width: 8.w,
+                                              height: 4.h,
+                                              child: Icon(
+                                                Icons.favorite_border_sharp,
+                                                color: const Color(0xff028a0f),
+                                                size: 4.5.w,
+                                              ),
+                                            ),
+                                          ),
+                                          GestureDetector(
+                                            onTap: () {
+                                              print('pressed 2');
+                                            },
+                                            child: Container(
+                                              margin:
+                                                  EdgeInsets.only(top: 0.5.h),
+                                              alignment: Alignment.center,
+                                              decoration: const BoxDecoration(
+                                                  color: Colors.white,
+                                                  shape: BoxShape.circle),
+                                              width: 8.w,
+                                              height: 4.h,
+                                              child: Icon(
+                                                Ionicons.cart_outline,
+                                                color: const Color(0xff028a0f),
+                                                size: 5.w,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    )
+                                  ],
                                 ),
                               ),
-                              const Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.white,
-                                    size: 20,
+                              Expanded(
+                                flex: 3,
+                                child: Container(
+                                  // color: Colors.amber,
+                                  margin: EdgeInsets.only(
+                                      bottom: 0.6.h, right: 1.5.w),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Icon(Icons.star,
+                                          color: Colors.white, size: 5.6.w),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.white,
+                                        size: 5.6.w,
+                                      ),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.white,
+                                        size: 5.6.w,
+                                      ),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.white,
+                                        size: 5.6.w,
+                                      ),
+                                      Icon(
+                                        Icons.star_outline,
+                                        color: Colors.white,
+                                        size: 5.6.w,
+                                      ),
+                                    ],
                                   ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.white,
-                                    size: 20,
-                                  ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.white,
-                                    size: 20,
-                                  ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.white,
-                                    size: 20,
-                                  ),
-                                  Icon(
-                                    Icons.star_outline,
-                                    color: Colors.white,
-                                    size: 20,
-                                  ),
-                                ],
+                                ),
                               )
                             ]),
-                      ),
-                    )
-                  ]),
+                      )
+                    ]),
+              ),
             ),
             Container(
               height: 3.h,
             ),
-            Container(
-              width: 90.w,
-              height: 20.5.h,
-              decoration: BoxDecoration(
-                  color: const Color(0xff028a0f),
-                  borderRadius: BorderRadius.circular(6.0)),
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.only(top: 1.5.h),
-                      width: 56.w,
-                      // color: Colors.white,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            decoration: const BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.only(
-                                    topRight: Radius.circular(6.0),
-                                    bottomRight: Radius.circular(6.0))),
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 8.0, vertical: 4.0),
-                            child: Text(
-                              'Organic Fruits',
-                              style: TextStyle(
-                                  color: const Color.fromARGB(255, 1, 102, 11),
-                                  fontFamily: 'Quicksand-Medium',
-                                  fontSize: 10.sp),
-                            ),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.only(left: 8.0, top: 3.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Avocados',
-                                  style: TextStyle(
-                                      fontFamily: 'Quicksand-Medium',
-                                      fontSize: 14.sp,
-                                      color: Colors.white),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.only(top: 1.h),
-                                  child: Text(
-                                    'Creamy and delicious organic avocados, packed with healthy fats and nutrients.',
-                                    style: TextStyle(
-                                      fontFamily: 'Quicksand-Regular',
-                                      fontSize: 10.sp,
+            MaterialButton(
+              onPressed: () {
+                print("pressed");
+              },
+              padding: EdgeInsets.zero,
+              materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              child: Container(
+                width: 90.w,
+                height: 20.5.h,
+                decoration: BoxDecoration(
+                    color: const Color(0xff028a0f),
+                    borderRadius: BorderRadius.circular(6.0)),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        flex: 6,
+                        child: Container(
+                          padding: EdgeInsets.only(top: 1.5.h, right: 1.w),
+                          // color: Colors.white,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                flex: 1,
+                                child: Container(
+                                  decoration: const BoxDecoration(
                                       color: Colors.white,
-                                    ),
+                                      borderRadius: BorderRadius.only(
+                                          topRight: Radius.circular(6.0),
+                                          bottomRight: Radius.circular(6.0))),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 8.0, vertical: 4.0),
+                                  child: AutoSizeText(
+                                    'Organic Fruits',
+                                    style: TextStyle(
+                                        fontFamily: 'Quicksand-Medium',
+                                        color: const Color(0xff028a0f),
+                                        fontSize: 24.sp),
                                   ),
                                 ),
-                                Container(
-                                  margin: EdgeInsets.only(top: 2.2.h),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                              ),
+                              Expanded(
+                                flex: 4,
+                                child: Container(
+                                  // color: Colors.amber,
+                                  padding: EdgeInsets.only(
+                                      left: 2.w,
+                                      top: 0.2.h,
+                                      bottom: 0.2.h,
+                                      right: 1.w),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
-                                      Text(
-                                        '\$1.99 each',
-                                        style: TextStyle(
-                                          fontFamily: 'Quicksand-SemiBold',
-                                          fontSize: 11.sp,
-                                          color: Colors.white,
+                                      Expanded(
+                                        flex: 3,
+                                        child: Container(
+                                          // color: Colors.amber,
+                                          alignment: Alignment.topLeft,
+                                          child: AutoSizeText(
+                                            'Avacados',
+                                            style: TextStyle(
+                                                fontFamily: 'Quicksand-Medium',
+                                                fontSize: 20.sp,
+                                                color: Colors.white),
+                                          ),
                                         ),
                                       ),
-                                      Text(
-                                        '20+ buys',
-                                        style: TextStyle(
-                                          fontFamily: 'Quicksand-Medium',
-                                          fontSize: 10.sp,
-                                          color: Colors.white,
+                                      Expanded(
+                                        flex: 7,
+                                        child: Container(
+                                          alignment: Alignment.topLeft,
+                                          // color: Colors.amber,
+                                          margin: EdgeInsets.only(top: 0.4.h),
+                                          child: AutoSizeText(
+                                            'Creamy and delicious organic avocados, packed with healthy fats and nutrients.',
+                                            style: TextStyle(
+                                              fontFamily: 'Quicksand-Regular',
+                                              fontSize: 11.sp,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 3,
+                                        child: Container(
+                                          alignment: Alignment.bottomLeft,
+                                          margin:
+                                              EdgeInsets.only(bottom: 0.6.h),
+                                          // color: Colors.green,
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              AutoSizeText(
+                                                '\$1.99 each',
+                                                style: TextStyle(
+                                                  fontFamily:
+                                                      'Quicksand-SemiBold',
+                                                  fontSize: 12.sp,
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                              Container(
+                                                margin:
+                                                    EdgeInsets.only(right: 1.w),
+                                                child: AutoSizeText(
+                                                  '120+ buys',
+                                                  style: TextStyle(
+                                                    fontFamily:
+                                                        'Quicksand-Medium',
+                                                    fontSize: 12.sp,
+                                                    color: Colors.white,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                       ),
                                     ],
                                   ),
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
-                        ],
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                      width: 30.w,
-                      child: Container(
-                        padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+                      Expanded(
+                        flex: 3,
                         child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.white),
-                                  borderRadius: const BorderRadius.all(
-                                      Radius.circular(6.0)),
-                                  color: Colors.white,
-                                ),
-                                width: 28.0000.w,
-                                height: 15.0000.h,
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(6.0),
-                                  child: Image.asset(
-                                    'images/Categories/avacados.jpg',
-                                    width: 28.0000.w,
-                                    height: 15.0000.h,
-                                    fit: BoxFit.fill,
-                                  ),
+                              Expanded(
+                                flex: 14,
+                                child: Stack(
+                                  alignment: Alignment.topRight,
+                                  fit: StackFit.expand,
+                                  children: [
+                                    Container(
+                                      margin: EdgeInsets.only(
+                                          top: 1.0.h,
+                                          bottom: 0.5.h,
+                                          right: 1.5.w),
+                                      decoration: BoxDecoration(
+                                        border: Border.all(color: Colors.white),
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(6.0)),
+                                        color: Colors.white,
+                                      ),
+                                      child: ClipRRect(
+                                        borderRadius:
+                                            BorderRadius.circular(6.0),
+                                        child: Image.asset(
+                                          'images/Categories/avacados.jpg',
+                                          fit: BoxFit.fill,
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      margin: EdgeInsets.only(
+                                          top: 1.5.h, right: 2.25.w),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.end,
+                                        children: [
+                                          GestureDetector(
+                                            onTap: () {
+                                              print("pressed 1");
+                                            },
+                                            child: Container(
+                                              alignment: Alignment.center,
+                                              decoration: const BoxDecoration(
+                                                  color: Colors.white,
+                                                  shape: BoxShape.circle),
+                                              width: 8.w,
+                                              height: 4.h,
+                                              child: Icon(
+                                                Icons.favorite_border_sharp,
+                                                color: const Color(0xff028a0f),
+                                                size: 4.5.w,
+                                              ),
+                                            ),
+                                          ),
+                                          GestureDetector(
+                                            onTap: () {
+                                              print('pressed 2');
+                                            },
+                                            child: Container(
+                                              margin:
+                                                  EdgeInsets.only(top: 0.5.h),
+                                              alignment: Alignment.center,
+                                              decoration: const BoxDecoration(
+                                                  color: Colors.white,
+                                                  shape: BoxShape.circle),
+                                              width: 8.w,
+                                              height: 4.h,
+                                              child: Icon(
+                                                Ionicons.cart_outline,
+                                                color: const Color(0xff028a0f),
+                                                size: 5.w,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    )
+                                  ],
                                 ),
                               ),
-                              const Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.white,
-                                    size: 20,
+                              Expanded(
+                                flex: 3,
+                                child: Container(
+                                  // color: Colors.amber,
+                                  margin: EdgeInsets.only(
+                                      bottom: 0.6.h, right: 1.5.w),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Icon(Icons.star,
+                                          color: Colors.white, size: 5.6.w),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.white,
+                                        size: 5.6.w,
+                                      ),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.white,
+                                        size: 5.6.w,
+                                      ),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.white,
+                                        size: 5.6.w,
+                                      ),
+                                      Icon(
+                                        Icons.star_outline,
+                                        color: Colors.white,
+                                        size: 5.6.w,
+                                      ),
+                                    ],
                                   ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.white,
-                                    size: 20,
-                                  ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.white,
-                                    size: 20,
-                                  ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.white,
-                                    size: 20,
-                                  ),
-                                  Icon(
-                                    Icons.star_outline,
-                                    color: Colors.white,
-                                    size: 20,
-                                  ),
-                                ],
+                                ),
                               )
                             ]),
-                      ),
-                    )
-                  ]),
+                      )
+                    ]),
+              ),
             ),
             Container(
               height: 3.h,
             ),
-            Container(
-              width: 90.w,
-              height: 20.5.h,
-              decoration: BoxDecoration(
-                  color: const Color(0xff028a0f),
-                  borderRadius: BorderRadius.circular(6.0)),
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.only(top: 1.5.h),
-                      width: 56.w,
-                      // color: Colors.white,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            decoration: const BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.only(
-                                    topRight: Radius.circular(6.0),
-                                    bottomRight: Radius.circular(6.0))),
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 8.0, vertical: 4.0),
-                            child: Text(
-                              'Organic Fruits',
-                              style: TextStyle(
-                                  color: const Color.fromARGB(255, 1, 102, 11),
-                                  fontFamily: 'Quicksand-Medium',
-                                  fontSize: 10.sp),
-                            ),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.only(left: 8.0, top: 3.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Avocados',
-                                  style: TextStyle(
-                                      fontFamily: 'Quicksand-Medium',
-                                      fontSize: 14.sp,
-                                      color: Colors.white),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.only(top: 1.h),
-                                  child: Text(
-                                    'Creamy and delicious organic avocados, packed with healthy fats and nutrients.',
-                                    style: TextStyle(
-                                      fontFamily: 'Quicksand-Regular',
-                                      fontSize: 10.sp,
+            MaterialButton(
+              onPressed: () {
+                print("pressed");
+              },
+              padding: EdgeInsets.zero,
+              materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              child: Container(
+                width: 90.w,
+                height: 20.5.h,
+                decoration: BoxDecoration(
+                    color: const Color(0xff028a0f),
+                    borderRadius: BorderRadius.circular(6.0)),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        flex: 6,
+                        child: Container(
+                          padding: EdgeInsets.only(top: 1.5.h, right: 1.w),
+                          // color: Colors.white,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                flex: 1,
+                                child: Container(
+                                  decoration: const BoxDecoration(
                                       color: Colors.white,
-                                    ),
+                                      borderRadius: BorderRadius.only(
+                                          topRight: Radius.circular(6.0),
+                                          bottomRight: Radius.circular(6.0))),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 8.0, vertical: 4.0),
+                                  child: AutoSizeText(
+                                    'Organic Fruits',
+                                    style: TextStyle(
+                                        fontFamily: 'Quicksand-Medium',
+                                        color: const Color(0xff028a0f),
+                                        fontSize: 24.sp),
                                   ),
                                 ),
-                                Container(
-                                  margin: EdgeInsets.only(top: 0.8.h),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                              ),
+                              Expanded(
+                                flex: 4,
+                                child: Container(
+                                  // color: Colors.amber,
+                                  padding: EdgeInsets.only(
+                                      left: 2.w,
+                                      top: 0.2.h,
+                                      bottom: 0.2.h,
+                                      right: 1.w),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
-                                      Text(
-                                        '\$1.99 each',
-                                        style: TextStyle(
-                                          fontFamily: 'Quicksand-SemiBold',
-                                          fontSize: 10.sp,
-                                          color: Colors.white,
+                                      Expanded(
+                                        flex: 3,
+                                        child: Container(
+                                          // color: Colors.amber,
+                                          alignment: Alignment.topLeft,
+                                          child: AutoSizeText(
+                                            'Apples',
+                                            style: TextStyle(
+                                                fontFamily: 'Quicksand-Medium',
+                                                fontSize: 20.sp,
+                                                color: Colors.white),
+                                          ),
                                         ),
                                       ),
-                                      Text(
-                                        '20+ buys',
-                                        style: TextStyle(
-                                          fontFamily: 'Quicksand-Medium',
-                                          fontSize: 10.sp,
-                                          color: Colors.white,
+                                      Expanded(
+                                        flex: 7,
+                                        child: Container(
+                                          alignment: Alignment.topLeft,
+                                          // color: Colors.amber,
+                                          margin: EdgeInsets.only(top: 0.4.h),
+                                          child: AutoSizeText(
+                                            'Fresh, crisp, and pesticide-free apples sourced from local organic farms.',
+                                            style: TextStyle(
+                                              fontFamily: 'Quicksand-Regular',
+                                              fontSize: 11.sp,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 3,
+                                        child: Container(
+                                          alignment: Alignment.bottomLeft,
+                                          margin:
+                                              EdgeInsets.only(bottom: 0.6.h),
+                                          // color: Colors.green,
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              AutoSizeText(
+                                                '\$2.99 per lb',
+                                                style: TextStyle(
+                                                  fontFamily:
+                                                      'Quicksand-SemiBold',
+                                                  fontSize: 12.sp,
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                              Container(
+                                                margin:
+                                                    EdgeInsets.only(right: 1.w),
+                                                child: AutoSizeText(
+                                                  '120+ buys',
+                                                  style: TextStyle(
+                                                    fontFamily:
+                                                        'Quicksand-Medium',
+                                                    fontSize: 12.sp,
+                                                    color: Colors.white,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                       ),
                                     ],
                                   ),
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
-                        ],
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                      width: 30.w,
-                      child: Container(
-                        padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+                      Expanded(
+                        flex: 3,
                         child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.white),
-                                  borderRadius: const BorderRadius.all(
-                                      Radius.circular(6.0)),
-                                  color: Colors.white,
-                                ),
-                                width: 28.0000.w,
-                                height: 15.0000.h,
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(6.0),
-                                  child: Image.asset(
-                                    'images/Categories/avacados.jpg',
-                                    width: 28.0000.w,
-                                    height: 15.0000.h,
-                                    fit: BoxFit.fill,
-                                  ),
+                              Expanded(
+                                flex: 14,
+                                child: Stack(
+                                  alignment: Alignment.topRight,
+                                  fit: StackFit.expand,
+                                  children: [
+                                    Container(
+                                      margin: EdgeInsets.only(
+                                          top: 1.0.h,
+                                          bottom: 0.5.h,
+                                          right: 1.5.w),
+                                      decoration: BoxDecoration(
+                                        border: Border.all(color: Colors.white),
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(6.0)),
+                                        color: Colors.white,
+                                      ),
+                                      child: ClipRRect(
+                                        borderRadius:
+                                            BorderRadius.circular(6.0),
+                                        child: Image.asset(
+                                          'images/Categories/apples.jpg',
+                                          fit: BoxFit.fill,
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      margin: EdgeInsets.only(
+                                          top: 1.5.h, right: 2.25.w),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.end,
+                                        children: [
+                                          GestureDetector(
+                                            onTap: () {
+                                              print("pressed 1");
+                                            },
+                                            child: Container(
+                                              alignment: Alignment.center,
+                                              decoration: const BoxDecoration(
+                                                  color: Colors.white,
+                                                  shape: BoxShape.circle),
+                                              width: 8.w,
+                                              height: 4.h,
+                                              child: Icon(
+                                                Icons.favorite_border_sharp,
+                                                color: const Color(0xff028a0f),
+                                                size: 4.5.w,
+                                              ),
+                                            ),
+                                          ),
+                                          GestureDetector(
+                                            onTap: () {
+                                              print('pressed 2');
+                                            },
+                                            child: Container(
+                                              margin:
+                                                  EdgeInsets.only(top: 0.5.h),
+                                              alignment: Alignment.center,
+                                              decoration: const BoxDecoration(
+                                                  color: Colors.white,
+                                                  shape: BoxShape.circle),
+                                              width: 8.w,
+                                              height: 4.h,
+                                              child: Icon(
+                                                Ionicons.cart_outline,
+                                                color: const Color(0xff028a0f),
+                                                size: 5.w,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    )
+                                  ],
                                 ),
                               ),
-                              const Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.white,
-                                    size: 20,
+                              Expanded(
+                                flex: 3,
+                                child: Container(
+                                  // color: Colors.amber,
+                                  margin: EdgeInsets.only(
+                                      bottom: 0.6.h, right: 1.5.w),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Icon(Icons.star,
+                                          color: Colors.white, size: 5.6.w),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.white,
+                                        size: 5.6.w,
+                                      ),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.white,
+                                        size: 5.6.w,
+                                      ),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.white,
+                                        size: 5.6.w,
+                                      ),
+                                      Icon(
+                                        Icons.star_outline,
+                                        color: Colors.white,
+                                        size: 5.6.w,
+                                      ),
+                                    ],
                                   ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.white,
-                                    size: 20,
-                                  ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.white,
-                                    size: 20,
-                                  ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.white,
-                                    size: 20,
-                                  ),
-                                  Icon(
-                                    Icons.star_outline,
-                                    color: Colors.white,
-                                    size: 20,
-                                  ),
-                                ],
+                                ),
                               )
                             ]),
-                      ),
-                    )
-                  ]),
+                      )
+                    ]),
+              ),
+            ),
+            Container(
+              height: 3.h,
             ),
           ],
         ),

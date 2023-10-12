@@ -331,7 +331,7 @@ class Account extends StatelessWidget {
                               children: [
                                 MaterialButton(
                                   onPressed: () {
-                                    Get.to(() => SignIn());
+                                    Get.to(() => const SignIn());
                                   },
                                   materialTapTargetSize:
                                       MaterialTapTargetSize.shrinkWrap,
@@ -381,7 +381,7 @@ class Account extends StatelessWidget {
                                       if (c.registerPageFlow.value != 0) {
                                         c.registerPageFlow.value = 0;
                                       }
-                                      Get.to(() => Register());
+                                      Get.to(() => const Register());
                                     },
                                     materialTapTargetSize:
                                         MaterialTapTargetSize.shrinkWrap,
