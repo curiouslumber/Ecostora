@@ -49,7 +49,7 @@ class OrganicFruits extends StatelessWidget {
             ),
             MaterialButton(
               onPressed: () {
-                print("pressed");
+                c.pageIndex.value += 1;
               },
               padding: EdgeInsets.zero,
               materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,

@@ -5,6 +5,7 @@ import 'package:ecostore/Views/Categories/organicfruits.dart';
 import 'package:ecostore/Views/Favourites/favourites.dart';
 import 'package:ecostore/Views/Home/home.dart';
 import 'package:ecostore/Views/Home/sidebar.dart';
+import 'package:ecostore/Views/Product/product.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -17,7 +18,8 @@ class HomePage extends StatelessWidget {
     const Favourite(),
     const Cart(),
     Account(),
-    OrganicFruits()
+    OrganicFruits(),
+    ProductPage()
   ];
   final c = Get.put(Controller());
 
