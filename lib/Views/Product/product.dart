@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:ecostore/ViewModel/controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -46,22 +47,44 @@ class ProductPage extends StatelessWidget {
                       fit: BoxFit.fitWidth,
                     ),
                   ),
-                  Container(
-                    padding: const EdgeInsets.all(4.0),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(4.0)),
-                    margin: const EdgeInsets.only(top: 6.0, left: 6.0),
-                    child: GestureDetector(
-                      onTap: () {
-                        c.pageIndex.value -= 1;
-                      },
-                      child: Icon(
-                        Icons.arrow_back_outlined,
-                        size: 6.5.w,
-                        color: const Color(0xff028a0f),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(4.0),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(4.0)),
+                        margin: const EdgeInsets.only(top: 6.0, left: 6.0),
+                        child: GestureDetector(
+                          onTap: () {
+                            c.pageIndex.value -= 1;
+                          },
+                          child: Icon(
+                            Icons.arrow_back_outlined,
+                            size: 6.5.w,
+                            color: const Color(0xff028a0f),
+                          ),
+                        ),
                       ),
-                    ),
+                      Container(
+                        margin: const EdgeInsets.only(top: 6.0),
+                        padding: const EdgeInsets.all(8.0),
+                        decoration: const BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(6.0),
+                                bottomLeft: Radius.circular(6.0))),
+                        child: const AutoSizeText(
+                          'Organic Fruits',
+                          style: TextStyle(
+                            color: Color(0xff028a0f),
+                            fontFamily: 'Quicksand-SemiBold',
+                          ),
+                        ),
+                      )
+                    ],
                   )
                 ],
               ),
@@ -107,8 +130,7 @@ class ProductPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(6.0),
                       color: Colors.white,
                     ),
-                    margin: const EdgeInsets.symmetric(
-                        horizontal: 8.0, vertical: 8.0),
+                    margin: const EdgeInsets.only(left: 8.0, right: 4.0),
                     height: 8.h,
                     child: const Text(
                       'Add to favourites',
@@ -123,6 +145,12 @@ class ProductPage extends StatelessWidget {
                   flex: 1,
                   child: Container(
                     alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(6.0),
+                      color: Colors.white,
+                    ),
+                    margin: const EdgeInsets.only(right: 8.0, left: 4.0),
+                    height: 8.h,
                     child: const Text(
                       'Move to Cart',
                       style: TextStyle(
@@ -130,13 +158,6 @@ class ProductPage extends StatelessWidget {
                         color: Color(0xff028a0f),
                       ),
                     ),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(6.0),
-                      color: Colors.white,
-                    ),
-                    margin: const EdgeInsets.symmetric(
-                        horizontal: 8.0, vertical: 8.0),
-                    height: 8.h,
                   ),
                 ),
               ],
