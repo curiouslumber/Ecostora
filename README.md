@@ -23,8 +23,10 @@ Ecostora is a revolutionary ecommerce platform dedicated to connecting conscious
   - Flutter & Dart
   - Sizer and AutoSizeText for Responsive Design
 - Backend
-  - MongoDB Atlas and Compass
-  - PostgreSQL using Google Cloud Platform and Azure Data Studio
+  - Node.js with Express.js
+  - GraphQL
+  - MongoDB 
+  - PostgreSQL
   - Firebase - Authentication, Firestore, Storage
 - Figma for UI Design
 - Leonardo AI and ChatGPT for content generation
