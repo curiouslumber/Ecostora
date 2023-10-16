@@ -17,9 +17,14 @@ Ecostora is a revolutionary ecommerce platform dedicated to connecting conscious
 
 
 ## Technologies Used:
-- Flutter & Dart
-- MongoDB Atlas and Compass
-- MVVM Architecture
-- Firebase - Authentication, Firestore, Storage
+- Architecture
+  - Model-ViewModel-View (MVVM)
+- Frontend
+  - Flutter & Dart
+  - Sizer and AutoSizeText for Responsive Design
+- Backend
+  - MongoDB Atlas and Compass
+  - PostgreSQL using Google Cloud Platform and Azure Data Studio
+  - Firebase - Authentication, Firestore, Storage
 - Figma for UI Design
-- Leonardo AI and ChatGPT
+- Leonardo AI and ChatGPT for content generation
