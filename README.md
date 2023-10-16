@@ -15,7 +15,6 @@ Ecostora is a revolutionary ecommerce platform dedicated to connecting conscious
 - Transparent Sourcing: Learn about the origins and practices of our products, ensuring you make informed and conscious choices.
 - Personalized Recommendations: Receive tailored product suggestions based on your preferences and browsing history.
 
-
 ## Technologies Used:
 - Architecture
   - Model-ViewModel-View (MVVM)
@@ -30,3 +29,6 @@ Ecostora is a revolutionary ecommerce platform dedicated to connecting conscious
   - Firebase - Authentication, Firestore, Storage
 - Figma for UI Design
 - Leonardo AI and ChatGPT for content generation
+
+## ER Diagram:
+<img src="https://github.com/curiouslumber/Ecostora/blob/main/images/pages/Ecostora-ER%20Diagram.png" width="1000">
