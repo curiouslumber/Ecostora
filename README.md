@@ -26,7 +26,7 @@ Ecostora is a revolutionary ecommerce platform dedicated to connecting conscious
   - GraphQL
   - MongoDB 
   - PostgreSQL
-  - Firebase - Authentication, Firestore, Storage
+  - Firebase - Authentication, Firestore, Storage, Realtime Database
 - Figma for UI Design
 - <a href="https://lucid.app/documents/view/220df197-a4ee-4fca-af96-4de814505bb4">ER Diagram</a>
 - Leonardo AI and ChatGPT for content generation
