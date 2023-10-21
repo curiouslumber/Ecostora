@@ -23,10 +23,12 @@ Ecostora is a revolutionary ecommerce platform dedicated to connecting conscious
   - Sizer and AutoSizeText for Responsive Design
 - Backend
   - Node.js with Express.js
-  - GraphQL
   - MongoDB 
-  - PostgreSQL
+  - Docker & PostgreSQL
   - Firebase - Authentication, Firestore, Storage, Realtime Database
+  - Google Cloud Platform for hosting backend server
+  - AWS S3 Storage for storing image
 - Figma for UI Design
 - <a href="https://lucid.app/documents/view/220df197-a4ee-4fca-af96-4de814505bb4">ER Diagram</a>
 - Leonardo AI and ChatGPT for content generation
+- <a href="https://lucid.app/documents/view/220df197-a4ee-4fca-af96-4de814505bb4">GitHub Repository for Backend</a>
