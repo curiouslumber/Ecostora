@@ -23,7 +23,7 @@ Ecostora is a revolutionary ecommerce platform dedicated to connecting conscious
   - Sizer and AutoSizeText for Responsive Design
 - Backend
   - Node.js with Express.js
-  - MongoDB 
+  - MongoDB Atlas
   - Docker & PostgreSQL
   - Firebase - Authentication, Firestore, Realtime Database
   - Google Cloud Platform for hosting backend server
